@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>15 · Flow Fields ×15 — Design Styles Lab</title>
+<meta name="description" content="15 demos de flow fields generativos: un motor, infinitos humos. Canvas puro." />
+<link rel="stylesheet" href="15-flow.css" />
+</head>
+<body>
+<header class="lab-header">
+  <p class="eyebrow"><a href="../index.html">← Design Styles Lab</a> · Estilo 15/15</p>
+  <h1>Flow Fields</h1>
+  <p class="lede">Partículas siguiendo ruido: un solo motor de 40 líneas, 15 configuraciones. 5 flujos, 5 contextos, 4 comportamientos y 1 laboratorio. Canvas vanilla.</p>
+  <nav class="toc" aria-label="Demos">
+    <a href="#f1">Clásico</a><a href="#f2">Rápido</a><a href="#f3">Seda</a><a href="#f4">Arcoíris</a>
+    <a href="#f5">Mono</a><a href="#f6">Hero</a><a href="#f7">Poster</a><a href="#f8">Álbum</a>
+    <a href="#f9">Noche</a><a href="#f10">Papel</a><a href="#f11">Click</a><a href="#f12">Órbita</a>
+    <a href="#f13">Lluvia</a><a href="#f14">Fuego</a><a href="#f15">★ Lab</a>
+  </nav>
+</header>
+
+<main>
+<h2 class="group">Flujos — el humo base</h2>
+
+<section class="bomb" id="f1"><div class="bomb-head"><span>01</span><h3>Clásico cyan</h3></div>
+<div class="demo"><canvas data-n="160" data-sp="1" data-h="190" data-hr="30" data-fade=".08"></canvas></div>
+<code>classic flow field, 160 cyan particles, slow drift, dark trails, generative starter</code></section>
+
+<section class="bomb" id="f2"><div class="bomb-head"><span>02</span><h3>Rápido tormenta</h3></div>
+<div class="demo"><canvas data-n="260" data-sp="3" data-h="210" data-hr="20" data-fade=".14"></canvas></div>
+<code>fast storm flow, 260 particles at speed 3, electric blue streaks, energy drink ad</code></section>
+
+<section class="bomb" id="f3"><div class="bomb-head"><span>03</span><h3>Seda lenta</h3></div>
+<div class="demo"><canvas data-n="90" data-sp=".4" data-h="300" data-hr="40" data-fade=".04"></canvas></div>
+<code>slow silk flow, 90 violet particles, long trails, meditation app background</code></section>
+
+<section class="bomb" id="f4"><div class="bomb-head"><span>04</span><h3>Arcoíris total</h3></div>
+<div class="demo"><canvas data-n="220" data-sp="1.4" data-h="0" data-hr="360" data-fade=".07"></canvas></div>
+<code>full-spectrum flow, hue range 360, pride-poster joy, festival visuals</code></section>
+
+<section class="bomb" id="f5"><div class="bomb-head"><span>05</span><h3>Mono tinta</h3></div>
+<div class="demo light"><canvas data-n="140" data-sp=".9" data-h="0" data-hr="0" data-fade=".09" data-bg="#f7f3ea" data-sat="0" data-li="20"></canvas></div>
+<code>single-ink flow on paper, black particles on cream, sumi-e generative, editorial divider</code></section>
+
+<h2 class="group">Contextos — dónde fluye</h2>
+
+<section class="bomb" id="f6"><div class="bomb-head"><span>06</span><h3>Hero con titular</h3></div>
+<div class="demo overlay"><canvas data-n="180" data-sp="1" data-h="230" data-hr="40" data-fade=".09"></canvas><p>DISEÑO<br />GENERATIVO</p></div>
+<code>flow field hero with display type over, conference landing, motion poster energy</code></section>
+
+<section class="bomb" id="f7"><div class="bomb-head"><span>07</span><h3>Poster vertical</h3></div>
+<div class="demo tall"><canvas data-n="200" data-sp="1.2" data-h="20" data-hr="40" data-fade=".08"></canvas><p>FUEGO<br />LENTO</p></div>
+<code>vertical ember flow poster, warm hues rising, print-shop generative series</code></section>
+
+<section class="bomb" id="f8"><div class="bomb-head"><span>08</span><h3>Portada álbum</h3></div>
+<div class="demo square"><canvas data-n="240" data-sp="1.6" data-h="280" data-hr="60" data-fade=".07"></canvas><p>NEBULA</p></div>
+<code>square nebula flow cover, violet drift, ambient record sleeve, bandcamp gold</code></section>
+
+<section class="bomb" id="f9"><div class="bomb-head"><span>09</span><h3>Noche profunda</h3></div>
+<div class="demo"><canvas data-n="120" data-sp=".6" data-h="220" data-hr="15" data-fade=".05"></canvas><p class="cap">pocas partículas, mucha paciencia</p></div>
+<code>deep night flow, sparse slow particles, screensaver calm, sleep-mode aesthetic</code></section>
+
+<section class="bomb" id="f10"><div class="bomb-head"><span>10</span><h3>Papel y oro</h3></div>
+<div class="demo light"><canvas data-n="150" data-sp=".8" data-h="45" data-hr="10" data-fade=".1" data-bg="#f7f3ea" data-sat="80" data-li="45"></canvas><p class="cap">tinta dorada sobre crema</p></div>
+<code>gold ink flow on paper, wedding stationery generative, luxury invitations</code></section>
+
+<h2 class="group">Comportamientos — qué hacen</h2>
+
+<section class="bomb" id="f11"><div class="bomb-head"><span>11</span><h3>Click = burst</h3></div>
+<div class="demo"><canvas data-n="120" data-sp="1" data-h="170" data-hr="40" data-fade=".1" data-burst="1"></canvas><p class="cap">clickea el humo ↑</p></div>
+<code>click bursts new particles into the flow, playful interaction, landing-page delight</code></section>
+
+<section class="bomb" id="f12"><div class="bomb-head"><span>12</span><h3>Órbita al centro</h3></div>
+<div class="demo"><canvas data-n="200" data-sp="1.5" data-h="200" data-hr="30" data-fade=".1" data-swirl="1"></canvas><p class="cap">todo cae al centro</p></div>
+<code>center-swirl flow, galaxy spiral pull, loading-screen hypnosis</code></section>
+
+<section class="bomb" id="f13"><div class="bomb-head"><span>13</span><h3>Lluvia de luz</h3></div>
+<div class="demo"><canvas data-n="220" data-sp="2.4" data-h="210" data-hr="10" data-fade=".16" data-grav="1"></canvas><p class="cap">la gravedad manda</p></div>
+<code>gravity flow field, particles rain down, melancholy cover art, november vibes</code></section>
+
+<section class="bomb" id="f14"><div class="bomb-head"><span>14</span><h3>Fuego que sube</h3></div>
+<div class="demo"><canvas data-n="220" data-sp="1.6" data-h="15" data-hr="30" data-fade=".1" data-rise="1"></canvas><p class="cap">fogata generativa</p></div>
+<code>rising ember flow, warm particles float up, campfire screensaver, cozy code</code></section>
+
+<h2 class="group">Cierre — la joya interactiva</h2>
+
+<section class="bomb" id="f15"><div class="bomb-head"><span>15 ★</span><h3>Lab — fórmulas del humo</h3></div>
+<div class="switcher"><label>partículas <input type="range" id="nR" min="40" max="400" value="180" /></label><label>velocidad <input type="range" id="sR" min="2" max="40" value="12" /></label><label>tono <input type="range" id="hR" min="0" max="360" value="190" /></label></div>
+<div class="demo"><canvas id="labC"></canvas></div>
+<code>live flow lab — same 40-line engine, your parameters. Steal it for any hero background.</code></section>
+</main>
+
+<footer class="lab-footer"><p><a href="../index.html">← volver a la galería</a> · Flow ×15 · humo matemático · MIT</p></footer>
+<script>
+function engine(cv,cfg){if(cv._raf)cancelAnimationFrame(cv._raf);const x=cv.getContext('2d');let W,H;function size(){const r=cv.parentElement.getBoundingClientRect();W=cv.width=Math.min(560,Math.max(200,r.width-8));H=cv.height=220;x.fillStyle=cfg.bg;x.fillRect(0,0,W,H);}size();cv._resize=size;
+let P=[];function spawn(a){a=a||{};return{x:a.x??Math.random()*W,y:a.y??Math.random()*H};}
+for(let i=0;i<cfg.n;i++)P.push(spawn());
+cv.addEventListener('pointerdown',e=>{if(!cfg.burst)return;const r=cv.getBoundingClientRect();for(let i=0;i<24;i++)P.push(spawn({x:(e.clientX-r.left)*(W/r.width),y:(e.clientY-r.top)*(H/r.height)}));if(P.length>600)P.splice(0,P.length-600);});
+(function tick(){x.globalAlpha=cfg.fade;x.fillStyle=cfg.bg;x.fillRect(0,0,W,H);x.globalAlpha=1;
+for(const p of P){const a=Math.sin(p.x*.012+performance.now()*.0002)+Math.cos(p.y*.015-performance.now()*.00016);let vx=Math.cos(a)*cfg.sp,vy=Math.sin(a)*cfg.sp;
+if(cfg.swirl){vx+=(W/2-p.x)*.002;vy+=(H/2-p.y)*.002;}if(cfg.grav)vy+=.06;if(cfg.rise)vy-=.08;
+p.x+=vx;p.y+=vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+x.fillStyle=`hsl(${cfg.h+Math.sin(p.x*.02)*cfg.hr} ${cfg.sat}% ${cfg.li}%)`;x.fillRect(p.x,p.y,1.6,1.6);}cv._raf=requestAnimationFrame(tick);})();}
+document.querySelectorAll('canvas[data-n]').forEach(cv=>{const d=cv.dataset;engine(cv,{n:+d.n,sp:+d.sp,h:+d.h,hr:+d.hr,fade:+d.fade,bg:d.bg||'rgba(4,4,10,1)',sat:d.sat??85,li:d.li??62,burst:d.burst,swirl:d.swirl,grav:d.grav,rise:d.rise});});
+const lab=document.getElementById('labC');let L={n:180,sp:1.2,h:190};
+function relab(){engine(lab,{n:L.n,sp:L.sp,h:L.h,hr:50,fade:.09,bg:'rgba(4,4,10,1)',sat:85,li:62});}
+relab();let deb;function upd(){clearTimeout(deb);deb=setTimeout(relab,250);}
+document.getElementById('nR').addEventListener('input',e=>{L.n=+e.target.value;upd();});
+document.getElementById('sR').addEventListener('input',e=>{L.sp=+e.target.value/10;upd();});
+document.getElementById('hR').addEventListener('input',e=>{L.h=+e.target.value;relab();});
+addEventListener('resize',()=>{document.querySelectorAll('canvas').forEach(cv=>{if(cv._resize)cv._resize();});});
+</script>
+</body>
+</html>

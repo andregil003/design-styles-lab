@@ -29,4 +29,11 @@
 - **08 Riso:** `styles/08-riso.html` (5 combos de tinta + 5 sujetos + 4 contextos + lab de desregistro con slider). Clase `ink-X` cambia el par de tintas.
 - **09 Spectral:** `styles/09-spectral.html` (5 sujetos + 5 colores + 4 aplicaciones + mezclador hue×intensidad con JS que pinta el glow).
 - **10 Flat:** `styles/10-flat.html` (5 marcas + 5 piezas + 4 paletas + tablero con switcher). Cero degradados en demos (solo fotos ninguna).
+## 2026-09-27 — Estilos 11–15 ×15 (segunda temporada, deep dive de scouts en skills)
+- **11 Brutalist:** `styles/11-brutalist.*` (kit + contextos + detalles + switch Swiss↔Terminal que repinta el body por `data-mode`).
+- **12 Minimal:** `styles/12-minimal.*` (silencios + piezas + reglas + switch de densidad; cero sombras/gradientes).
+- **13 Dark Luxe:** `styles/13-darkluxe.*` (superficies + componentes + piezas SaaS + switcher de acento por variable).
+- **14 Pixel:** `styles/14-pixel.*` (sprites box-shadow + UI arcade + efectos CRT + maquinita de monedas con contador).
+- **15 Flow:** `styles/15-flow.*` (un motor canvas de ~40 líneas, 15 configs por `data-*`; lab con sliders; rAF cancelable).
+- **Index:** 5 tarjetas nuevas (11–15) + TOC + título actualizados.
 - **Pendiente:** skill `design-styles-lab`, deploy público.

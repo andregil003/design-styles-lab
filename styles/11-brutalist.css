@@ -1,0 +1,65 @@
+/* 11 · Brutalist Industrial ×15 — sin permiso */
+:root{--mono:ui-monospace,Menlo,Consolas,monospace;--sans:Arial,"Helvetica Neue",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);line-height:1.5}
+/* SWISS PRINT */
+body[data-mode="swiss"]{background:#f2efe6;color:#111}
+body[data-mode="swiss"] .lab-header h1 em,body[data-mode="swiss"] .group{color:#d00000}
+body[data-mode="swiss"] .bomb{background:#faf8f1;border:3px solid #111}
+body[data-mode="swiss"] .bomb code{background:#111;color:#f2efe6;border-top:3px solid #111}
+/* MILITARY TERMINAL */
+body[data-mode="mil"]{background:#0c0f0a;color:#c8ffb0}
+body[data-mode="mil"] .lab-header h1 em,body[data-mode="mil"] .group{color:#ffb300}
+body[data-mode="mil"] .bomb{background:#101408;border:2px solid #4a5d23}
+body[data-mode="mil"] .bomb code{background:#050703;color:#9dc08b;border-top:2px solid #4a5d23}
+body[data-mode="mil"] a{color:#ffb300}
+:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.lab-header{max-width:1080px;margin:0 auto;padding:3rem 1.5rem 1rem}
+.eyebrow{font-family:var(--mono);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;margin:0 0 .5rem;opacity:.7}
+.eyebrow a{color:inherit}
+.lab-header h1{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 .5rem;font-weight:900;letter-spacing:-.02em}
+.lede{max-width:64ch;margin:0 0 1.2rem;font-family:var(--mono);font-size:.85rem}
+.toc{display:flex;flex-wrap:wrap;gap:.45rem}
+.toc a{font-family:var(--mono);font-size:.72rem;color:inherit;text-decoration:none;border:2px solid currentColor;padding:.3rem .75rem;font-weight:700}
+main{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;gap:1.8rem}
+.group{font-family:var(--mono);font-size:.85rem;letter-spacing:.2em;margin:1.5rem 0 -.5rem}
+.bomb-head{display:flex;gap:.8rem;align-items:baseline;padding:1.1rem 1.3rem 0}
+.bomb-head span{font-family:var(--mono);font-size:.75rem;font-weight:700;padding:.15rem .5rem;white-space:nowrap;background:#111;color:#f2efe6}
+body[data-mode="mil"] .bomb-head span{background:#ffb300;color:#111}
+.bomb-head h3{margin:0;font-size:1.3rem;font-weight:900;text-transform:uppercase}
+.demo{position:relative;overflow:hidden;min-height:200px;margin:1rem 1.3rem;display:flex;align-items:center;justify-content:center;border:2px dashed currentColor}
+.demo.col{flex-direction:column;gap:.8rem}
+.bomb code{display:block;font-family:var(--mono);font-size:.75rem;padding:.7rem 1.3rem;white-space:pre-wrap}
+/* kit */
+.box{border:3px solid currentColor;padding:1rem 1.6rem;font-weight:900;text-align:center;box-shadow:6px 6px 0 currentColor}
+.stamp{border:4px solid #d00000;color:#d00000;font-weight:900;font-size:1.6rem;padding:.4rem 1.2rem;transform:rotate(-8deg);border-radius:6px}
+body[data-mode="mil"] .stamp{border-color:#ffb300;color:#ffb300}
+.redact{font-family:var(--mono);font-weight:700;font-size:1.3rem}
+.marquee{overflow:hidden;white-space:nowrap;border-top:3px solid currentColor;border-bottom:3px solid currentColor;width:100%;font-weight:900}
+.marquee span{display:inline-block;animation:mq 8s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.huge{font-weight:900;font-size:clamp(4rem,14vw,8rem);line-height:1;margin:0}
+.huge.sm{font-size:clamp(2.5rem,8vw,4.5rem)}
+.mani{font-family:var(--mono);font-weight:700;text-align:left}
+.term pre{font-family:var(--mono);font-size:.9rem;margin:0;padding:1rem;text-align:left}
+.ticket{border:3px solid currentColor;padding:1rem 2rem;text-align:center}
+.ticket b{display:block;font-size:1.5rem}
+.ticket i{font-family:var(--mono);font-style:normal;letter-spacing:.3em}
+.hazard{background:repeating-linear-gradient(45deg,#ffb300 0 24px,#111 24px 48px);color:#fff;font-weight:900;padding:.6rem 1.6rem;font-size:1.3rem;text-shadow:2px 2px 0 #111}
+.demo.grid{background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:44px 44px}
+.strike{font-family:var(--mono);font-size:1.2rem;font-weight:700}
+.strike b{color:#d00000}
+.hard{font:900 1.1rem var(--sans);background:currentColor;background:#111;color:#f2efe6;border:3px solid #111;box-shadow:6px 6px 0 #d00000;padding:.7rem 2rem;cursor:pointer}
+body[data-mode="mil"] .hard{background:#ffb300;color:#111;border-color:#ffb300;box-shadow:6px 6px 0 #4a5d23}
+.hard:active{transform:translate(4px,4px);box-shadow:2px 2px 0 #d00000}
+.raw{border-collapse:collapse;font-family:var(--mono)}
+.raw th,.raw td{border:2px solid currentColor;padding:.4rem 1rem;text-align:left}
+.switcher{display:flex;gap:.5rem;padding:.9rem 1.3rem 0}
+.switcher button{font-family:var(--mono);font-weight:700;background:transparent;color:inherit;border:2px solid currentColor;padding:.35rem 1rem;cursor:pointer}
+.switcher button.on{background:#111;color:#f2efe6}
+body[data-mode="mil"] .switcher button.on{background:#ffb300;color:#111}
+.lab-footer{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;font-family:var(--mono);font-size:.8rem}
+.lab-footer a{color:inherit}
+@media (max-width:640px){.demo{min-height:170px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none !important;transition:none !important}}

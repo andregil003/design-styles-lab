@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>13 · Dark Luxe ×15 — Design Styles Lab</title>
+<meta name="description" content="15 demos dark luxe: negro casi total, un acento, hairlines. CSS puro." />
+<link rel="stylesheet" href="13-darkluxe.css" />
+</head>
+<body>
+<header class="lab-header">
+  <p class="eyebrow"><a href="../index.html">← Design Styles Lab</a> · Estilo 13/15</p>
+  <h1>Dark Luxe</h1>
+  <p class="lede">Canvas casi negro, un solo acento, bordes hairline: 5 superficies, 5 componentes, 4 piezas y 1 switcher de acento. CSS puro.</p>
+  <nav class="toc" aria-label="Demos">
+    <a href="#d1">Canvas</a><a href="#d2">Orbe</a><a href="#d3">Hairline</a><a href="#d4">Botón</a>
+    <a href="#d5">Tipo</a><a href="#d6">Glass card</a><a href="#d7">Pricing</a><a href="#d8">Badge</a>
+    <a href="#d9">Input</a><a href="#d10">Toggle</a><a href="#d11">Hero SaaS</a><a href="#d12">Dashboard</a>
+    <a href="#d13">Login</a><a href="#d14">Changelog</a><a href="#d15">★ Acento</a>
+  </nav>
+</header>
+
+<main>
+<h2 class="group">Superficies — el negro</h2>
+
+<section class="bomb" id="d1"><div class="bomb-head"><span>01</span><h3>Canvas #010102</h3></div>
+<div class="demo"><p class="dl-t">No es negro puro.<br />Tiene un suspiro azul.</p></div>
+<code>near-black canvas with faint blue tint, four-step surface ladder, no shadows needed</code></section>
+
+<section class="bomb" id="d2"><div class="bomb-head"><span>02</span><h3>Orbe de fondo</h3></div>
+<div class="demo orb-bg"><p class="dl-t">El glow vive atrás.</p></div>
+<code>single blurred orb behind content, lavender-blue glow, decoration never behind text</code></section>
+
+<section class="bomb" id="d3"><div class="bomb-head"><span>03</span><h3>Hairline card</h3></div>
+<div class="demo"><div class="card"><p>Los bordes de 1px<br />separan sin gritar.</p></div></div>
+<code>hairline border trick with box-shadow ring, no layout shift, quiet component boundary</code></section>
+
+<section class="bomb" id="d4"><div class="bomb-head"><span>04</span><h3>Botón único</h3></div>
+<div class="demo"><button class="cta">Empezar →</button></div>
+<code>one accent CTA, lavender-blue fill, hover lift only, everything else ghost</code></section>
+
+<section class="bomb" id="d5"><div class="bomb-head"><span>05</span><h3>Tipo ajustada</h3></div>
+<div class="demo"><p class="tight">Ship<br />quietly.</p></div>
+<code>tight tracked headlines, secondary text muted blue-gray, hierarchy by tone not size</code></section>
+
+<h2 class="group">Componentes — el sistema</h2>
+
+<section class="bomb" id="d6"><div class="bomb-head"><span>06</span><h3>Glass card</h3></div>
+<div class="demo orb-bg"><div class="glass"><p>Uptime 99.99%</p><small>últimos 90 días</small></div></div>
+<code>frosted stat card over orb, max two per viewport, blur capped at 16px</code></section>
+
+<section class="bomb" id="d7"><div class="bomb-head"><span>07</span><h3>Pricing</h3></div>
+<div class="demo"><div class="price"><small>PRO</small><p>$20<small>/mes</small></p><button class="cta sm">Elegir</button></div></div>
+<code>single highlighted tier, hairline siblings, price in display type, one CTA</code></section>
+
+<section class="bomb" id="d8"><div class="bomb-head"><span>08</span><h3>Badge v2.0</h3></div>
+<div class="demo"><span class="badge">✦ NUEVO · Raycast-style</span></div>
+<code>pill announcement badge, accent dot glow, changelog energy, above the hero</code></section>
+
+<section class="bomb" id="d9"><div class="bomb-head"><span>09</span><h3>Input oscuro</h3></div>
+<div class="demo"><div class="field">tu@correo.com</div></div>
+<code>dark input on surface-2, hairline border, focus ring in accent, no placeholders grises</code></section>
+
+<section class="bomb" id="d10"><div class="bomb-head"><span>10</span><h3>Toggle</h3></div>
+<div class="demo"><div class="toggle on"><i></i></div></div>
+<code>pill toggle with accent state, instant snap, linear-style settings row</code></section>
+
+<h2 class="group">Piezas — el producto</h2>
+
+<section class="bomb" id="d11"><div class="bomb-head"><span>11</span><h3>Hero SaaS</h3></div>
+<div class="demo col orb-bg"><span class="badge">✦ v2.0 ya disponible</span><p class="tight">Hecho para<br />equipos rápidos.</p><button class="cta">Empezar gratis</button></div>
+<code>saas hero stack: badge plus tight headline plus one CTA over orb, linear-vercel voice</code></section>
+
+<section class="bomb" id="d12"><div class="bomb-head"><span>12</span><h3>Dashboard</h3></div>
+<div class="demo"><div class="dash"><div class="row"><span>MRR</span><b>$48k</b></div><div class="row"><span>Churn</span><b>0.8%</b></div><div class="row"><span>NPS</span><b>72</b></div></div></div>
+<code>hairline metric rows, tabular numbers, no charts needed, cursor-style dashboard</code></section>
+
+<section class="bomb" id="d13"><div class="bomb-head"><span>13</span><h3>Login</h3></div>
+<div class="demo"><div class="login"><p>Bienvenido</p><div class="field">tu@correo.com</div><button class="cta">Entrar →</button></div></div>
+<code>centered auth card, one field one button, orb behind, zero friction</code></section>
+
+<section class="bomb" id="d14"><div class="bomb-head"><span>14</span><h3>Changelog</h3></div>
+<div class="demo"><div class="log"><p><b>v2.4</b> — modo oscuro real <span>hoy</span></p><p><b>v2.3</b> — atajos de teclado <span>ayer</span></p></div></div>
+<code>changelog feed, version bold plus muted date, ship-log aesthetic, public building</code></section>
+
+<h2 class="group">Cierre — la joya interactiva</h2>
+
+<section class="bomb" id="d15"><div class="bomb-head"><span>15 ★</span><h3>Acento — un color manda</h3></div>
+<div class="switcher" role="group" aria-label="Acento"><button data-a="#5e6ad2" class="on">lavanda</button><button data-a="#22c55e">menta</button><button data-a="#f59e0b">ámbar</button><button data-a="#f472b6">rosa</button></div>
+<div class="demo col orb-bg" id="accBox"><span class="badge">✦ demo viva</span><p class="tight">Un acento.</p><button class="cta">Botón →</button></div>
+<code>accent switcher — every glowing element follows one variable. Restraint scales.</code></section>
+</main>
+
+<footer class="lab-footer"><p><a href="../index.html">← volver a la galería</a> · Dark Luxe ×15 · casi negro · MIT</p></footer>
+<script>
+const box=document.getElementById('accBox');
+document.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('[data-a]').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  box.style.setProperty('--acc',b.dataset.a);}));
+</script>
+</body>
+</html>

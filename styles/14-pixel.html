@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>14 · Pixel Retro ×15 — Design Styles Lab</title>
+<meta name="description" content="15 demos pixel art: sprites box-shadow, HUD y máquina de monedas. CSS puro." />
+<link rel="stylesheet" href="14-pixel.css" />
+</head>
+<body>
+<header class="lab-header">
+  <p class="eyebrow"><a href="../index.html">← Design Styles Lab</a> · Estilo 14/15</p>
+  <h1>Pixel Retro</h1>
+  <p class="lede">Sprites dibujados con box-shadow, scanlines y tipografía mono: 5 sprites, 5 interfaces, 4 efectos y 1 maquinita. CSS puro, cero imágenes.</p>
+  <nav class="toc" aria-label="Demos">
+    <a href="#p1">Corazón</a><a href="#p2">Invader</a><a href="#p3">Moneda</a><a href="#p4">Hongo</a>
+    <a href="#p5">Calavera</a><a href="#p6">Diálogo</a><a href="#p7">HUD</a><a href="#p8">Botón</a>
+    <a href="#p9">Título</a><a href="#p10">Game over</a><a href="#p11">Scanlines</a><a href="#p12">Blink</a>
+    <a href="#p13">Shake</a><a href="#p14">CRT</a><a href="#p15">★ Monedas</a>
+  </nav>
+</header>
+
+<main>
+<h2 class="group">Sprites — un div, puro box-shadow</h2>
+
+<section class="bomb" id="p1"><div class="bomb-head"><span>01</span><h3>Corazón 1UP</h3></div>
+<div class="demo"><div class="px heart"></div><p class="cap">HP +1</p></div>
+<code>pixel heart sprite from one div and box-shadows, 8-bit red, crisp-edges rendering</code></section>
+
+<section class="bomb" id="p2"><div class="bomb-head"><span>02</span><h3>Invader</h3></div>
+<div class="demo"><div class="px invader"></div><p class="cap">100 pts si le atinas</p></div>
+<code>space invader sprite, green phosphor, symmetrical box-shadow map, arcade classic</code></section>
+
+<section class="bomb" id="p3"><div class="bomb-head"><span>03</span><h3>Moneda</h3></div>
+<div class="demo"><div class="px coin"></div><p class="cap">brilla a 2 frames</p></div>
+<code>spinning coin sprite, two-frame blink animation, gold pickup, mario-grade shine</code></section>
+
+<section class="bomb" id="p4"><div class="bomb-head"><span>04</span><h3>Hongo</h3></div>
+<div class="demo"><div class="px shroom"></div><p class="cap">crece o muere</p></div>
+<code>power-up mushroom sprite, red cap with white dots, platformer pickup, boxed pixels</code></section>
+
+<section class="bomb" id="p5"><div class="bomb-head"><span>05</span><h3>Calavera</h3></div>
+<div class="demo"><div class="px skull"></div><p class="cap">jefe final</p></div>
+<code>pixel skull boss sprite, white bone on dark, dungeon warning, final-boss energy</code></section>
+
+<h2 class="group">Interfaces — el arcade</h2>
+
+<section class="bomb" id="p6"><div class="bomb-head"><span>06</span><h3>Caja de diálogo</h3></div>
+<div class="demo"><div class="dialog"><b>???:</b> ¿Llevas pociones? Esta cueva no perdona.</div></div>
+<code>RPG dialog box, stepped borders, typewriter mono, NPC wisdom</code></section>
+
+<section class="bomb" id="p7"><div class="bomb-head"><span>07</span><h3>HUD</h3></div>
+<div class="demo"><div class="hud"><span>♥♥♥♡</span><span>SCORE 04250</span><span>⏱ 01:12</span></div></div>
+<code>arcade HUD strip, hearts plus score plus timer, always on top, no clutter</code></section>
+
+<section class="bomb" id="p8"><div class="bomb-head"><span>08</span><h3>Botón START</h3></div>
+<div class="demo"><button class="pbtn">▶ START</button></div>
+<code>chunky pixel button, stepped shadow press, blinking press-start prompt, tactile arcade</code></section>
+
+<section class="bomb" id="p9"><div class="bomb-head"><span>09</span><h3>Pantalla de título</h3></div>
+<div class="demo col"><p class="title">INVASORES<br />DEL BARRIO</p><p class="cap">© 2026 · 1 jugador</p></div>
+<code>arcade title screen, stacked condensed type, blinking credit line, insert-coin mood</code></section>
+
+<section class="bomb" id="p10"><div class="bomb-head"><span>10</span><h3>Game over</h3></div>
+<div class="demo"><p class="gameover">GAME OVER</p></div>
+<code>game-over screen, huge red stepped type, silence after, continue in 9 seconds</code></section>
+
+<h2 class="group">Efectos — el tubo de rayos</h2>
+
+<section class="bomb" id="p11"><div class="bomb-head"><span>11</span><h3>Scanlines</h3></div>
+<div class="demo scan"><p class="title sm">MODO CRT</p></div>
+<code>repeating-linear scanline overlay, 1px dark lines, instant cathode-ray tube</code></section>
+
+<section class="bomb" id="p12"><div class="bomb-head"><span>12</span><h3>Blink</h3></div>
+<div class="demo"><p class="blink">— PULSA CUALQUIER TECLA —</p></div>
+<code>step-end blink prompt, 1s loop, press-any-key ritual, no easing allowed</code></section>
+
+<section class="bomb" id="p13"><div class="bomb-head"><span>13</span><h3>Damage shake</h3></div>
+<div class="demo"><div class="shakebox">¡AY!</div></div>
+<code>damage shake burst, stepped keyframes, 300ms of pain, screen-shake juice</code></section>
+
+<section class="bomb" id="p14"><div class="bomb-head"><span>14</span><h3>Curva CRT</h3></div>
+<div class="demo"><div class="crt"><p class="title sm">CANAL 3</p></div></div>
+<code>barrel-curved CRT frame, vignette plus glass glare, channel-3 nostalgia</code></section>
+
+<h2 class="group">Cierre — la joya interactiva</h2>
+
+<section class="bomb" id="p15"><div class="bomb-head"><span>15 ★</span><h3>Maquinita — mete moneda</h3></div>
+<div class="switcher"><button id="coinB">🪙 METER MONEDA</button></div>
+<div class="demo col"><div class="px coin" id="coinSlot"></div><p class="title sm">CRÉDITOS: <span id="credits">0</span></p><p class="cap" id="coinMsg">la máquina espera…</p></div>
+<code>insert-coin machine — credit counter plus messages. Prototype for gamified CTAs.</code></section>
+</main>
+
+<footer class="lab-footer"><p><a href="../index.html">← volver a la galería</a> · Pixel ×15 · insert coin · MIT</p></footer>
+<script>
+let c=0;const msgs=['¡CRÉDITO! ¿jugamos?','¡OTRA! la máquina calienta','¡SUERTE, CAMPEÓN!','¡YA MERECES EL BONUS!'];
+document.getElementById('coinB').addEventListener('click',()=>{
+  c++;document.getElementById('credits').textContent=c;
+  document.getElementById('coinMsg').textContent=msgs[Math.min(c-1,msgs.length-1)];});
+</script>
+</body>
+</html>

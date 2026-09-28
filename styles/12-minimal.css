@@ -1,0 +1,53 @@
+/* 12 · Minimalist Editorial ×15 — menos */
+:root{--paper:#faf8f4;--ink:#1a1a1a;--muted:#8a8a8a;--line:#e5e0d6;--accent:#a0522d;
+--mono:ui-monospace,Menlo,Consolas,monospace;--serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.lab-header{max-width:1080px;margin:0 auto;padding:4rem 1.5rem 2rem}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 1rem}
+.eyebrow a{color:inherit}
+.lab-header h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);margin:0 0 .5rem;letter-spacing:-.01em}
+.lede{max-width:58ch;color:var(--muted);margin:0 0 1.5rem}
+.toc{display:flex;flex-wrap:wrap;gap:.5rem}
+.toc a{font-family:var(--mono);font-size:.7rem;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding:.2rem .1rem}
+.toc a:hover{border-color:var(--ink)}
+main{max-width:1080px;margin:0 auto;padding:0 1.5rem 4rem;display:grid;gap:3rem}
+.group{font-family:var(--mono);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin:2rem 0 -1rem}
+.bomb{scroll-margin-top:1rem;border-top:1px solid var(--line);padding-top:1.5rem}
+.bomb-head{display:flex;gap:1rem;align-items:baseline}
+.bomb-head span{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.bomb-head h3{margin:0;font-family:var(--serif);font-weight:400;font-size:1.4rem}
+.demo{min-height:220px;display:flex;align-items:center;justify-content:center;padding:3rem 1rem}
+.demo.col{flex-direction:column;gap:.8rem;text-align:center}
+.demo.text{max-width:68ch;margin-inline:auto;text-align:left;display:block}
+.solo{font-family:var(--serif);font-size:2.6rem;margin:0}
+.line{font-family:var(--serif);font-style:italic;font-size:1.8rem;margin:0}
+.line em{font-style:italic;color:var(--accent)}
+.small{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0}
+.tiny{font-size:2rem;color:var(--muted);margin:0}
+.bignum{font-size:clamp(3.5rem,9vw,6rem);font-weight:200;margin:0;letter-spacing:-.04em}
+.huge{font-size:clamp(3rem,9vw,5.5rem);font-weight:800;margin:0;letter-spacing:-.03em}
+.loose{font-family:var(--serif);font-size:1.5rem;line-height:2;margin:0;text-align:center}
+.narrow{max-width:60ch}
+.narrow p{margin:0}
+hr{border:none;border-top:1px solid var(--ink);width:120px;margin:0}
+.menu{display:flex;gap:2.2rem}
+.menu span{font-size:.9rem;letter-spacing:.12em;cursor:default}
+.menu span:hover{text-decoration:underline;text-underline-offset:6px}
+h4{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin:0 0 .8rem}
+.text p{margin:0 0 1rem;color:#333}
+.bomb code{display:block;font-family:var(--mono);font-size:.72rem;color:var(--muted);border-top:1px solid var(--line);margin-top:1.5rem;padding-top:.8rem;white-space:pre-wrap}
+.extra{display:none}
+#densBox[data-d="full"] .extra{display:block}
+#densBox[data-d="air"]{gap:2.5rem;padding:4rem 1rem}
+#densBox[data-d="mid"]{gap:1.2rem}
+#densBox[data-d="full"]{gap:.4rem;padding:1.5rem 1rem}
+.switcher{display:flex;gap:.5rem;margin-top:1.5rem}
+.switcher button{font-family:var(--mono);font-size:.72rem;background:none;border:none;border-bottom:1px solid var(--line);padding:.3rem .2rem;cursor:pointer;color:var(--muted);letter-spacing:.1em}
+.switcher button.on{color:var(--ink);border-color:var(--ink)}
+.lab-footer{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;color:var(--muted);font-size:.8rem;font-family:var(--mono)}
+.lab-footer a{color:inherit}
+@media (max-width:640px){.demo{min-height:180px;padding:2rem 1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none !important;transition:none !important}}

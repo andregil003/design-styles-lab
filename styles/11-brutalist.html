@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>11 · Brutalist Industrial ×15 — Design Styles Lab</title>
+<meta name="description" content="15 demos brutalistas: Swiss print vs terminal militar. CSS puro." />
+<link rel="stylesheet" href="11-brutalist.css" />
+</head>
+<body data-mode="swiss">
+<header class="lab-header">
+  <p class="eyebrow"><a href="../index.html">← Design Styles Lab</a> · Estilo 11/15</p>
+  <h1>Brutalist Industrial <em>×15</em></h1>
+  <p class="lede">Bordes gruesos, grids rígidos, rojo alerta: 5 elementos, 5 contextos, 4 detalles y 1 switch Swiss↔Terminal que repinta todo. CSS puro.</p>
+  <nav class="toc" aria-label="Demos">
+    <a href="#t1">Bordes</a><a href="#t2">Sello</a><a href="#t3">Censura</a><a href="#t4">Marquesina</a>
+    <a href="#t5">Tipo enorme</a><a href="#t6">Poster</a><a href="#t7">Terminal</a><a href="#t8">Manifiesto</a>
+    <a href="#t9">Boleto</a><a href="#t10">Señal</a><a href="#t11">Grid</a><a href="#t12">Tachado</a>
+    <a href="#t13">Botón duro</a><a href="#t14">Tabla</a><a href="#t15">★ Modo</a>
+  </nav>
+</header>
+
+<main>
+<h2 class="group">Elementos — el kit</h2>
+
+<section class="bomb" id="t1"><div class="bomb-head"><span>01</span><h3>Bordes de 3px</h3></div>
+<div class="demo"><div class="box">CAJA<br />IRROMPIBLE</div></div>
+<code>thick 3px black borders, zero radius, hard offset shadows, raw brutalist container</code></section>
+
+<section class="bomb" id="t2"><div class="bomb-head"><span>02</span><h3>Sello urgente</h3></div>
+<div class="demo"><div class="stamp">URGENTE ★</div></div>
+<code>rotated rubber stamp, red alert ink, grunge border, classified-document energy</code></section>
+
+<section class="bomb" id="t3"><div class="bomb-head"><span>03</span><h3>Barra censurada</h3></div>
+<div class="demo"><p class="redact">EL PRECIO ES ███████</p></div>
+<code>redaction bars over text, declassified document vibe, information withheld</code></section>
+
+<section class="bomb" id="t4"><div class="bomb-head"><span>04</span><h3>Marquesina</h3></div>
+<div class="demo"><div class="marquee"><span>ATENCIÓN ★ ATENCIÓN ★ ATENCIÓN ★ ATENCIÓN ★&nbsp;</span></div></div>
+<code>scrolling marquee ticker, industrial warning strip, infinite CSS animation</code></section>
+
+<section class="bomb" id="t5"><div class="bomb-head"><span>05</span><h3>Tipo enorme</h3></div>
+<div class="demo"><p class="huge">NO</p></div>
+<code>extreme scale typography, one word fills the frame, Archivo Black style, no decoration</code></section>
+
+<h2 class="group">Contextos — dónde golpea</h2>
+
+<section class="bomb" id="t6"><div class="bomb-head"><span>06</span><h3>Poster suizo</h3></div>
+<div class="demo col"><p class="huge sm">BAU</p><div class="box">EXPO 26 · ZURICH</div></div>
+<code>swiss industrial print poster, rigid grid, off-white newsprint, red accent, helvetica-now voice</code></section>
+
+<section class="bomb" id="t7"><div class="bomb-head"><span>07</span><h3>Terminal militar</h3></div>
+<div class="demo term"><pre>> acceso concedido
+> dossier_042.pdf
+> ████████ 100%
+> fin del informe_</pre></div>
+<code>military terminal readout, dense mono, declassified blueprint, green-on-black or amber</code></section>
+
+<section class="bomb" id="t8"><div class="bomb-head"><span>08</span><h3>Manifiesto</h3></div>
+<div class="demo col"><p class="mani">1. NADA DE SOMBRAS SUAVES<br />2. NADA DE BORDES REDONDOS<br />3. TODO SE LEE O SE ROMPE</p></div>
+<code>brutalist manifesto list, numbered rules, uppercase, print-or-break attitude</code></section>
+
+<section class="bomb" id="t9"><div class="bomb-head"><span>09</span><h3>Boleto</h3></div>
+<div class="demo"><div class="ticket"><b>FORO SOL</b><span>12·OCT ★ $350</span><i>✂ - - -</i></div></div>
+<code>perforated ticket stub, dashed cut line, bold event data, gig memorabilia</code></section>
+
+<section class="bomb" id="t10"><div class="bomb-head"><span>10</span><h3>Señal de peligro</h3></div>
+<div class="demo"><div class="hazard">⚠ ALTO VOLTAJE</div></div>
+<code>diagonal hazard stripes, warning sign panel, safety-yellow and black, industrial site</code></section>
+
+<h2 class="group">Detalles — el acabado</h2>
+
+<section class="bomb" id="t11"><div class="bomb-head"><span>11</span><h3>Grid visible</h3></div>
+<div class="demo grid"><div class="box">12 COLUMNAS.<br />NI UNA MÁS.</div></div>
+<code>visible construction grid behind content, swiss columns exposed, structure as decoration</code></section>
+
+<section class="bomb" id="t12"><div class="bomb-head"><span>12</span><h3>Tachado corrector</h3></div>
+<div class="demo"><p class="strike">precio viejo $999 <b>$499</b></p></div>
+<code>corrector-strike discount, old price crossed in red, brutalist pricing, no fine print</code></section>
+
+<section class="bomb" id="t13"><div class="bomb-head"><span>13</span><h3>Botón que se hunde</h3></div>
+<div class="demo"><button class="hard">COMPRAR</button></div>
+<code>hard-shadow button that slams on click, translate on active, physical press feedback</code></section>
+
+<section class="bomb" id="t14"><div class="bomb-head"><span>14</span><h3>Tabla cruda</h3></div>
+<div class="demo"><table class="raw"><tr><th>PIEZA</th><th>STOCK</th></tr><tr><td>TORNILLO</td><td>400</td></tr><tr><td>TUERCA</td><td>0 ★</td></tr></table></div>
+<code>raw data table, 2px rules, no zebra, monospace numbers, inventory brutalism</code></section>
+
+<h2 class="group">Cierre — la joya interactiva</h2>
+
+<section class="bomb" id="t15"><div class="bomb-head"><span>15 ★</span><h3>Modo — Swiss Print ↔ Terminal Militar</h3></div>
+<div class="switcher" role="group" aria-label="Modo"><button data-m="swiss" class="on">swiss print</button><button data-m="mil">terminal militar</button></div>
+<div class="demo col"><div class="stamp">MODO: <span id="modeName">SWISS</span></div><div class="box">MISMA PÁGINA.<br />OTRO RÉGIMEN.</div></div>
+<code>one page two regimes — same DOM repainted Swiss newsprint vs military terminal. The brutalist theme engine.</code></section>
+</main>
+
+<footer class="lab-footer"><p><a href="../index.html">← volver a la galería</a> · Brutalist ×15 · sin permiso · MIT</p></footer>
+<script>
+document.querySelectorAll('[data-m]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('[data-m]').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  document.body.dataset.mode=b.dataset.m;
+  document.getElementById('modeName').textContent=b.dataset.m==='swiss'?'SWISS':'TERMINAL';}));
+</script>
+</body>
+</html>
