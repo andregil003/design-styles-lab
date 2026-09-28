@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Design Styles Lab — 10 estilos nicho</title>
+<meta name="description" content="Galería de 10 estilos de diseño nicho con demos en CSS/SVG puro y recetas de prompt reutilizables." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <p class="eyebrow">Design Styles Lab</p>
+  <h1>10 estilos nicho <em>para robar</em></h1>
+  <p class="lede">Cada estilo trae demo viva en CSS/SVG puro (cero imágenes externas, cero peso) + su receta de prompt para replicarlo con IA o a mano.</p>
+  <nav class="toc" aria-label="Índice de estilos">
+    <a href="#sticker-bomb">01 Sticker Bomb</a>
+    <a href="#x-ray">02 Technical X-Ray</a>
+    <a href="#cross-stitch">03 Cross-Stitch Type</a>
+    <a href="#watercolor">04 Childlike Watercolor</a>
+    <a href="#aura">05 Aura Gradient</a>
+    <a href="#radial">06 Radial Cutout Collage</a>
+    <a href="#specimen">07 Annotated Specimen</a>
+    <a href="#riso">08 Riso Eco Poster</a>
+    <a href="#spectral">09 Spectral Glow</a>
+    <a href="#flat-vector">10 Flat Vector Branding</a>
+  </nav>
+</header>
+
+<main>
+<!-- 01 -->
+<section class="style" id="sticker-bomb">
+  <div class="style-head"><span class="num">01</span><div><h2>Sticker Bomb</h2><p>Objeto real, stickers caóticos que chocan. Energía JDM / skate / punk.</p></div></div>
+  <div class="demo demo-sticker" aria-label="Demo sticker bomb">
+    <div class="sb-subject">🛹</div>
+    <span class="stk s1">★ PUNK</span><span class="stk s2">☠ RIDE</span>
+    <span class="stk s3">⚡ FAST</span><span class="stk s4">✌ LO-FI</span>
+    <span class="stk s5">◉ JDM</span><span class="stk s6">✖ NO RULES</span>
+    <span class="stk s7">♥ DIY</span>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> packaging juvenil, posters de música, branding callejero.</p>
+    <code>dense overlapping vinyl stickers, white die-cut borders, peeled corners, holographic accents, maximum visual density, no empty space</code>
+    <p class="made">Hecho con: CSS puro · Skills: <span>fal-ai-image</span> <span>retro-diffusion</span></p>
+    <p class="made">★ <a href="styles/01-sticker-bomb.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="style" id="x-ray">
+  <div class="style-head"><span class="num">02</span><div><h2>Technical X-Ray</h2><p>Sujeto fantasmal semitransparente + etiquetas de datos falsas.</p></div></div>
+  <div class="demo demo-xray" aria-label="Demo x-ray">
+    <svg viewBox="0 0 300 190" class="xray-svg" aria-hidden="true">
+      <g fill="none" stroke="#67e8f9" stroke-width="1.5" opacity="0.9">
+        <rect x="110" y="30" width="80" height="110" rx="18"/>
+        <circle cx="150" cy="70" r="22"/>
+        <circle cx="150" cy="70" r="10" stroke-dasharray="4 3"/>
+        <line x1="110" y="100" x2="190" y="100" stroke-dasharray="6 4"/>
+        <line x1="130" y="140" x2="130" y="170"/><line x1="170" y="140" x2="170" y="170"/>
+      </g>
+      <g font-family="ui-monospace,monospace" font-size="9" fill="#a5f3fc">
+        <text x="12" y="40">SCAN.04 // GHOST</text>
+        <text x="12" y="55">DENS 0.42 · GLOW 78%</text>
+        <text x="205" y="120">CORE.T-22</text>
+        <text x="205" y="135">Δ 0.003</text>
+      </g>
+      <g stroke="#67e8f9" stroke-width="1" opacity="0.6">
+        <line x1="90" y="38" x2="110" y="55"/><line x1="200" y="118" x2="190" y="105"/>
+      </g>
+    </svg>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> hero sections tech, portfolios, branding de hardware/IA.</p>
+    <code>translucent x-ray scan of a device, ghostly cyan components on deep blue radiographic background, thin measurement lines, tiny scientific labels, forensic scan aesthetic</code>
+    <p class="made">Hecho con: SVG + mono · Skills: <span>css-native</span> <span>diagram-design</span></p>
+    <p class="made">★ <a href="styles/02-technical-xray.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="style" id="cross-stitch">
+  <div class="style-head"><span class="num">03</span><div><h2>Cross-Stitch Type</h2><p>Letras bordadas sobre foto. Puntada visible, textura táctil.</p></div></div>
+  <div class="demo demo-stitch" aria-label="Demo cross stitch">
+    <span class="stitched" data-text="hola">hola</span>
+    <p class="stitch-sub">hecho a mano · 36 days of type vibes</p>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> marcas craft, cafés, Etsy, proyectos cálidos.</p>
+    <code>embroidered cross-stitch lettering over a photo, visible thread texture, hoop frame, cozy handmade craft aesthetic</code>
+    <p class="made">Hecho con: SVG text con dash = puntadas · Skills: <span>draw-your-font</span> <span>myfont-variants</span></p>
+    <p class="made">★ <a href="styles/03-cross-stitch.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="style" id="watercolor">
+  <div class="style-head"><span class="num">04</span><div><h2>Childlike Watercolor</h2><p>Manchas temblorosas + doodles ingenuos. Naïf a propósito.</p></div></div>
+  <div class="demo demo-water" aria-label="Demo watercolor">
+    <div class="wc-blob b1"></div><div class="wc-blob b2"></div><div class="wc-blob b3"></div>
+    <p class="wc-title">mi primer<br />poster <span>★</span></p>
+    <svg class="wc-doodle" viewBox="0 0 200 40" aria-hidden="true"><path d="M5 25 C 40 5, 70 35, 105 18 S 170 8, 195 22" fill="none" stroke="#e11d48" stroke-width="4" stroke-linecap="round"/></svg>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> marcas infantiles, educación, wellness, ONGs.</p>
+    <code>wobbly watercolor washes, naive crayon doodles, childlike illustration, visible paper texture, wonky sun and stars</code>
+    <p class="made">Hecho con: CSS blobs + SVG wobbly · Skills: <span>fal-ai-image</span> <span>imagegen-frontend-web</span></p>
+    <p class="made">★ <a href="styles/04-watercolor.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="style" id="aura">
+  <div class="style-head"><span class="num">05</span><div><h2>Aura Gradient</h2><p>Color borroso que brilla como aura + texto pequeñito.</p></div></div>
+  <div class="demo demo-aura" aria-label="Demo aura">
+    <p class="aura-tiny">respira · siente · crea</p>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> wellness, música, wallpapers, headers suaves.</p>
+    <code>dreamy aura gradient, blurred glowing color fields, soft pastel transitions, tiny centered text, calm energy</code>
+    <p class="made">Hecho con: gradientes + blur + grano · Skills: <span>css-native</span> <span>canvas-generative</span></p>
+    <p class="made">★ <a href="styles/05-aura.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="style" id="radial">
+  <div class="style-head"><span class="num">06</span><div><h2>Radial Cutout Collage</h2><p>Fragmentos orbitando un hueco central. El hueco es para tu titular.</p></div></div>
+  <div class="demo demo-radial" aria-label="Demo radial collage">
+    <div class="rc-hole"><p>NUEVO<br />DROP</p><small>12 tracks</small></div>
+    <span class="frag f1">◉</span><span class="frag f2">▲</span><span class="frag f3">✦</span>
+    <span class="frag f4">■</span><span class="frag f5">❋</span><span class="frag f6">●</span>
+    <span class="frag f7">◆</span><span class="frag f8">✚</span>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> portadas de álbum, posters, headers con titular al centro.</p>
+    <code>radial collage orbiting a central circular hole, mixed fragments and type cutouts, bold poster composition, center left empty for headline</code>
+    <p class="made">Hecho con: posicionamiento radial CSS · Skills: <span>imagegen-frontend-web</span></p>
+    <p class="made">★ <a href="styles/06-radial.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="style" id="specimen">
+  <div class="style-head"><span class="num">07</span><div><h2>Annotated Specimen</h2><p>Planta en retícula de ciencia. Etiquetas serif pequeñas que susurran.</p></div></div>
+  <div class="demo demo-specimen" aria-label="Demo specimen">
+    <svg viewBox="0 0 300 190" class="sp-svg" aria-hidden="true">
+      <g stroke="#8a8578" stroke-width="1" opacity="0.5">
+        <line x1="0" y1="47" x2="300" y2="47"/><line x1="0" y1="94" x2="300" y2="94"/><line x1="0" y1="141" x2="300" y2="141"/>
+        <line x1="75" y1="0" x2="75" y2="190"/><line x1="150" y1="0" x2="150" y2="190"/><line x1="225" y1="0" x2="225" y2="190"/>
+      </g>
+      <g fill="none" stroke="#5C6B4E" stroke-width="2.5">
+        <line x1="150" y1="160" x2="150" y2="60"/>
+        <path d="M150 130 C 120 120, 105 95, 108 70 C 135 78, 148 100, 150 130"/>
+        <path d="M150 110 C 180 100, 195 75, 192 50 C 165 58, 152 80, 150 110"/>
+        <ellipse cx="150" cy="48" rx="14" ry="20"/>
+      </g>
+      <g font-family="Georgia,serif" font-size="10" font-style="italic" fill="#5c5546">
+        <text x="18" y="30">fig. 01 — folium</text>
+        <text x="200" y="80">caule, 12 cm</text>
+        <text x="196" y="165">flos · µ 0.4</text>
+      </g>
+      <g stroke="#5c5546" stroke-width="1"><line x1="120" y1="32" x2="140" y2="60"/><line x1="198" y1="84" x2="178" y2="90"/></g>
+    </svg>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> cosmética natural, suplementos, packaging premium.</p>
+    <code>vintage botanical specimen on aged paper grid, serif annotations with leader lines, muted earth palette, museum herbarium plate</code>
+    <p class="made">Hecho con: SVG + Georgia italic · Skills: <span>brand-guidelines</span> <span>imagegen-frontend-web</span></p>
+    <p class="made">★ <a href="styles/07-specimen.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="style" id="riso">
+  <div class="style-head"><span class="num">08</span><div><h2>Riso Eco Poster</h2><p>Dos tintas, desregistro intencional, grano. Espíritu fotocopiadora punk.</p></div></div>
+  <div class="demo demo-riso" aria-label="Demo riso">
+    <p class="riso-kicker">fanzine nº 07 — tiraje 200</p>
+    <p class="riso-title" data-text="RUIDO ROSA">RUIDO ROSA</p>
+    <p class="riso-sub">teal × flúor · overprint real con blend-mode</p>
+    <div class="riso-sun" aria-hidden="true"></div>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> zines, sellos musicales, estudios que venden craft.</p>
+    <code>two spot inks, fluorescent pink over teal, slight misregistration offset, overprint color where layers cross, grainy soy ink, rough paper</code>
+    <p class="made">Hecho con: multiply + offset + grano SVG · Skills: <span>retro-diffusion</span> <span>stable-diffusion-local</span></p>
+    <p class="made">★ <a href="styles/08-riso.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="style" id="spectral">
+  <div class="style-head"><span class="num">09</span><div><h2>Spectral Glow</h2><p>Sujeto brillando sobre negro casi total. Primo nocturno del aura.</p></div></div>
+  <div class="demo demo-spectral" aria-label="Demo spectral">
+    <div class="sp-orb" aria-hidden="true"></div>
+    <p class="sp-text">SEÑAL<span>origen desconocido · 04:12 am</span></p>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> gaming, electrónica, moda, heroes dramáticos.</p>
+    <code>glowing spectral subject on near-black background, volumetric bloom, vignette, tiny caption text, dark ethereal</code>
+    <p class="made">Hecho con: capas de glow CSS · Skills: <span>metal-fx</span> <span>threejs-postprocessing</span></p>
+    <p class="made">★ <a href="styles/09-spectral.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="style" id="flat-vector">
+  <div class="style-head"><span class="num">10</span><div><h2>Flat Vector Branding</h2><p>Formas limpias, colores planos, etiquetas bold. Atemporal.</p></div></div>
+  <div class="demo demo-flat" aria-label="Demo flat vector">
+    <div class="fv-card">
+      <div class="fv-mark" aria-hidden="true"><span class="fv-c"></span><span class="fv-b"></span></div>
+      <p class="fv-name">NORDICA®</p>
+      <p class="fv-tag">diseño · objeto · norte</p>
+      <div class="fv-row"><span>EST. 2026</span><span>CDMX</span></div>
+    </div>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> logos, sistemas de marca, SaaS.</p>
+    <code>flat vector brand mark, clean geometric shapes, bold grotesque labels, two-color palette, swiss grid alignment</code>
+    <p class="made">Hecho con: formas CSS puras · Skills: <span>brand-guidelines</span> <span>brandkit</span> <span>icon-pack</span></p>
+    <p class="made">★ <a href="styles/10-flat.html">Ver los 15 demos de este estilo →</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>Design Styles Lab · 10 estilos · demos 100% offline (CSS/SVG) · hecho junto con André 🤝</p>
+  <p><a href="https://github.com/andregil003/design-styles-lab">repo</a> · MIT</p>
+</footer>
+</body>
+</html>

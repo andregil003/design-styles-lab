@@ -1,0 +1,78 @@
+/* 03 · Cross-Stitch Type ×15 — hilo y CSS */
+:root{
+  --bg:#f3ede0; --card:#fffdf7; --ink:#3d3226; --muted:#8a7f6a;
+  --line:#ddd2ba; --accent:#c2255c;
+  --mono:ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace;
+  --sans:"Helvetica Neue",Arial,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lab-header{max-width:1080px;margin:0 auto;padding:3rem 1.5rem 1rem}
+.eyebrow{font-family:var(--mono);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.eyebrow a{color:var(--accent);text-decoration:none}
+.lab-header h1{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 .5rem}
+.lab-header h1 em{font-style:normal;color:var(--accent)}
+.lede{max-width:64ch;color:var(--muted);margin:0 0 1.2rem}
+.toc{display:flex;flex-wrap:wrap;gap:.45rem}
+.toc a{font-family:var(--mono);font-size:.72rem;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.3rem .75rem}
+.toc a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;gap:1.8rem}
+.group{font-family:var(--mono);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:1.5rem 0 -.5rem}
+.bomb{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;scroll-margin-top:1rem}
+.bomb-head{display:flex;gap:.8rem;align-items:baseline;padding:1.1rem 1.3rem 0}
+.bomb-head span{font-family:var(--mono);font-size:.75rem;background:var(--accent);color:#fff;border-radius:7px;padding:.15rem .5rem;font-weight:700;white-space:nowrap}
+.bomb-head h3{margin:0;font-size:1.25rem}
+.demo{position:relative;overflow:hidden;min-height:250px;margin:1rem 1.3rem;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem}
+.cap{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0}
+.bomb code{display:block;font-family:var(--mono);font-size:.75rem;color:#e8e2d2;background:#2b2519;border-top:1px solid var(--line);padding:.7rem 1.3rem;white-space:pre-wrap}
+
+/* cloth + grid bases */
+.d-cloth{background-color:#efe6d2;background-image:repeating-linear-gradient(0deg,rgba(120,90,40,.06) 0 2px,transparent 2px 5px),repeating-linear-gradient(90deg,rgba(120,90,40,.06) 0 2px,transparent 2px 5px)}
+.d-grid{background-color:#f7f4ec;background-image:linear-gradient(#c9bfa8 1px,transparent 1px),linear-gradient(90deg,#c9bfa8 1px,transparent 1px);background-size:22px 22px}
+.d-photo{background:linear-gradient(180deg,#ff9a5c,#c2255c 60%,#3b1d5e)}
+.d-denim{background:repeating-linear-gradient(45deg,#33415e 0 3px,#2b3850 3px 6px)}
+.d-canvas{background:#e4d7bd}
+
+/* stitched glyphs: solid thread + offset dashed twin */
+.xl{font-family:var(--mono);font-weight:700;font-size:4.6rem;line-height:1;margin:0;position:relative}
+.xl::after{content:attr(data-t);position:absolute;inset:0;color:transparent;-webkit-text-stroke:2px dashed currentColor;transform:translate(4px,4px);pointer-events:none;opacity:.75}
+.x-red{color:#c2255c}.x-green{color:#2f9e44}.x-blue{color:#1971c2}.x-white{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.script{font-family:Georgia,serif;font-style:italic;font-size:3.6rem;color:#5c4a2e;margin:0;position:relative}
+.script::after{content:attr(data-t);position:absolute;inset:0;color:transparent;-webkit-text-stroke:1.5px dashed #a68a5b;transform:translate(2px,2px)}
+.tuft{font-family:var(--mono);font-weight:900;font-size:4.6rem;color:#e67700;margin:0;text-shadow:0 3px 0 #93370d,0 6px 0 rgba(0,0,0,.18);letter-spacing:.02em}
+.geo{font-family:var(--mono);font-weight:700;font-size:4.6rem;color:#111;margin:0;letter-spacing:.3em;text-indent:.3em}
+.word{font-family:var(--mono);font-weight:700;font-size:clamp(2rem,7vw,3.6rem);color:#111;margin:0;letter-spacing:.06em;position:relative}
+.word::after{content:attr(data-t);position:absolute;inset:0;color:transparent;-webkit-text-stroke:2px dashed #e64980;transform:translate(5px,5px)}
+.mono-g{font-family:Georgia,serif;font-size:3.4rem;color:#9a7b2d;margin:0;text-shadow:0 0 1px #9a7b2d}
+.script-sm{font-family:Georgia,serif;font-style:italic;font-size:2rem;color:#5c4a2e;margin:0}
+
+/* supports */
+.hoop{width:210px;height:210px;border:14px solid #b08968;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:#efe6d2;background-image:repeating-linear-gradient(0deg,rgba(120,90,40,.08) 0 2px,transparent 2px 5px);box-shadow:0 10px 24px rgba(0,0,0,.18),inset 0 4px 10px rgba(0,0,0,.12)}
+.hoop .xl{font-size:3.6rem}
+.patch{background:#f3e6c8;color:#7a2e1d;border:3px dashed #7a2e1d;border-radius:12px;font-family:var(--mono);font-weight:700;font-style:normal;font-size:1.1rem;padding:.6rem 1.2rem;letter-spacing:.1em;transform:rotate(-4deg)}
+.tote{font-family:var(--mono);font-weight:700;font-size:2rem;color:#3d3226;border:3px solid #3d3226;border-radius:6px;padding:.5rem 1.4rem;transform:rotate(-2deg)}
+.sampler{border:6px double #7a2e1d;border-radius:4px;padding:1rem 2rem;text-align:center;background:#f7f1e1}
+.sampler p{font-family:Georgia,serif;font-style:italic;font-size:1.6rem;color:#7a2e1d;margin:0}
+.sampler span{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.frame-f{border:3px solid #2f9e44;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;padding:1rem 2rem;text-align:center;background:rgba(255,253,247,.7)}
+.frame-f span{color:#2f9e44;letter-spacing:.5em}
+.abc{display:flex;gap:1.2rem}
+.abc .xl{font-size:3rem}
+.d-photo .cap{color:#ffe9d6}
+
+/* stitch lab */
+.switcher{display:flex;gap:.5rem;padding:.9rem 1.3rem 0;flex-wrap:wrap}
+.switcher button{font-family:var(--mono);font-size:.75rem;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.35rem 1rem;cursor:pointer}
+.switcher button.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+.lab-letter{font-family:var(--mono);font-weight:700;font-size:5rem;line-height:1;margin:0;color:#c2255c;position:relative}
+.lab-letter::after{content:attr(data-t);position:absolute;inset:0;color:transparent;pointer-events:none}
+.stitch-x::after{-webkit-text-stroke:3px dashed #a61e4d;transform:translate(5px,5px)}
+.stitch-dash::after{-webkit-text-stroke:3px dashed #1971c2;transform:translate(0,0)}
+.stitch-dots::after{-webkit-text-stroke:6px dotted #2f9e44;transform:translate(-3px,-3px)}
+
+.lab-footer{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;color:var(--muted);font-size:.85rem}
+.lab-footer a{color:var(--accent);text-decoration:none}
+@media (max-width:640px){.demo{min-height:210px}.xl{font-size:3.4rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none !important;transition:none !important}}

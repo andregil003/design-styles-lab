@@ -1,0 +1,133 @@
+/* Design Styles Lab — 10 demos 100% CSS/SVG, cero assets externos */
+:root{
+  --paper:#f7f3ea; --ink:#1d1b16; --muted:#6f6a5c;
+  --card:#fffdf7; --line:#e2d9c6; --accent:#e11d48;
+  --mono:ui-monospace,"Cascadia Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:"Helvetica Neue",Arial,system-ui,sans-serif;
+  --cond:"Arial Narrow","Helvetica Neue Condensed",Impact,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+:focus-visible{outline:2px solid #2864ff;outline-offset:2px}
+
+.site-header{max-width:1080px;margin:0 auto;padding:3.5rem 1.5rem 1rem}
+.eyebrow{font-family:var(--mono);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.site-header h1{font-family:var(--serif);font-size:clamp(2.2rem,5.5vw,4rem);line-height:1.05;margin:0 0 .75rem;letter-spacing:-.01em}
+.site-header h1 em{font-style:italic;color:var(--accent)}
+.lede{max-width:60ch;color:var(--muted);margin:0 0 1.5rem}
+.toc{display:flex;flex-wrap:wrap;gap:.5rem}
+.toc a{font-family:var(--mono);font-size:.75rem;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;transition:background 120ms ease,color 120ms ease}
+.toc a:hover{background:var(--ink);color:var(--paper)}
+
+main{max-width:1080px;margin:0 auto;padding:1rem 1.5rem 3rem;display:grid;gap:2.5rem}
+.style{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;scroll-margin-top:1rem}
+.style-head{display:flex;gap:1rem;align-items:baseline;padding:1.4rem 1.5rem .5rem}
+.num{font-family:var(--mono);font-size:.8rem;color:#fff;background:var(--ink);border-radius:8px;padding:.2rem .55rem;white-space:nowrap}
+.style-head h2{font-family:var(--serif);margin:0;font-size:1.6rem}
+.style-head p{margin:.15rem 0 0;color:var(--muted)}
+.demo{min-height:300px;margin:1rem 1.5rem;border-radius:14px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.recipe{padding:0 1.5rem 1.5rem}
+.recipe p{margin:.5rem 0}
+.recipe code{display:block;font-family:var(--mono);font-size:.78rem;background:#141310;color:#e8e4d8;border-radius:10px;padding:.8rem 1rem;white-space:pre-wrap}
+.made{font-size:.85rem;color:var(--muted)}
+.made span{border:1px solid var(--line);border-radius:999px;padding:.05rem .6rem;font-family:var(--mono);font-size:.72rem;white-space:nowrap}
+
+/* ---------- 01 STICKER BOMB ---------- */
+.demo-sticker{background:#22242b}
+.sb-subject{font-size:6rem;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+.stk{position:absolute;font-family:var(--mono);font-weight:700;font-size:.8rem;padding:.35rem .7rem;border-radius:10px;border:3px solid #fff;box-shadow:0 4px 0 rgba(0,0,0,.45);color:#111}
+.s1{background:#ffe600;top:12%;left:8%;transform:rotate(-12deg)}
+.s2{background:#ff3b6b;color:#fff;top:8%;right:10%;transform:rotate(9deg)}
+.s3{background:#00e5ff;bottom:14%;left:6%;transform:rotate(7deg)}
+.s4{background:#c084fc;color:#fff;bottom:10%;right:8%;transform:rotate(-8deg)}
+.s5{background:#7CFC00;top:44%;left:2%;transform:rotate(-6deg)}
+.s6{background:#ff6b00;color:#fff;top:40%;right:3%;transform:rotate(11deg)}
+.s7{background:#fff;bottom:4%;left:44%;transform:rotate(-3deg)}
+
+/* ---------- 02 X-RAY ---------- */
+.demo-xray{background:radial-gradient(ellipse at 50% 40%,#123a5e 0%,#0a1f3d 55%,#050d1f 100%)}
+.xray-svg{width:min(420px,90%);filter:drop-shadow(0 0 14px rgba(103,232,249,.45))}
+
+/* ---------- 03 CROSS-STITCH ---------- */
+.demo-stitch{background-color:#f3ede0;background-image:linear-gradient(#d8cfba 1px,transparent 1px),linear-gradient(90deg,#d8cfba 1px,transparent 1px);background-size:22px 22px;flex-direction:column;gap:.2rem}
+.stitched{font-family:var(--mono);font-weight:700;font-size:clamp(3rem,9vw,5.5rem);color:#c2255c;position:relative;letter-spacing:.05em}
+.stitched::after{content:attr(data-text);position:absolute;inset:0;color:transparent;-webkit-text-stroke:2px dashed #a61e4d;transform:translate(3px,3px);pointer-events:none}
+.stitch-sub{font-family:var(--mono);font-size:.75rem;color:var(--muted);border:2px dashed #a61e4d;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;padding:.3rem 1rem;background:#fffdf7}
+
+/* ---------- 04 WATERCOLOR ---------- */
+.demo-water{background:#fdf8ec;flex-direction:column}
+.wc-blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.75}
+.b1{width:220px;height:180px;background:radial-gradient(circle,#ffd6e0 0%,#ffc2d4 60%,transparent 70%);top:6%;left:8%}
+.b2{width:200px;height:190px;background:radial-gradient(circle,#cdeaff 0%,#aed9f5 60%,transparent 70%);bottom:4%;right:6%}
+.b3{width:150px;height:130px;background:radial-gradient(circle,#fff3b0 0%,#ffe66d 60%,transparent 70%);top:8%;right:16%}
+.wc-title{position:relative;font-family:"Comic Sans MS","Chalkboard SE",cursive;font-size:2.6rem;line-height:1.1;color:#1d3557;transform:rotate(-3deg);text-align:center;margin:0}
+.wc-title span{color:#e63946}
+.wc-doodle{position:relative;width:min(320px,80%);margin-top:.4rem}
+
+/* ---------- 05 AURA ---------- */
+.demo-aura{background:
+  radial-gradient(38% 46% at 30% 35%,rgba(255,120,180,.85),transparent 70%),
+  radial-gradient(42% 50% at 70% 30%,rgba(120,180,255,.9),transparent 70%),
+  radial-gradient(48% 55% at 55% 72%,rgba(190,130,255,.85),transparent 70%),
+  radial-gradient(30% 34% at 78% 72%,rgba(255,220,150,.8),transparent 70%),
+  #1b1030;min-height:320px}
+.demo-aura::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.10'/%3E%3C/svg%3E")}
+.aura-tiny{position:relative;color:#fff;font-size:.85rem;letter-spacing:.42em;text-transform:uppercase;text-shadow:0 2px 18px rgba(255,255,255,.5);margin:0}
+
+/* ---------- 06 RADIAL COLLAGE ---------- */
+.demo-radial{background:#101014}
+.rc-hole{width:190px;height:190px;border-radius:50%;background:#f5f2e9;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;box-shadow:0 0 0 10px #101014,0 0 60px rgba(245,242,233,.25)}
+.rc-hole p{font-family:var(--cond);font-weight:700;font-size:1.7rem;line-height:1;margin:0;letter-spacing:.04em}
+.rc-hole small{font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;color:var(--muted)}
+.frag{position:absolute;font-size:2rem}
+.f1{color:#ff3b6b;top:10%;left:16%;transform:rotate(-14deg)}
+.f2{color:#ffe600;top:14%;right:16%;transform:scale(1.4)}
+.f3{color:#00e5ff;bottom:16%;left:12%}
+.f4{color:#7CFC00;bottom:12%;right:14%;transform:rotate(12deg)}
+.f5{color:#ff8c00;top:48%;left:5%}
+.f6{color:#c084fc;top:46%;right:5%}
+.f7{color:#fff;bottom:5%;left:42%}
+.f8{color:#00e5ff;top:6%;left:48%}
+
+/* ---------- 07 SPECIMEN ---------- */
+.demo-specimen{background:#f3ecd9}
+.sp-svg{width:min(440px,94%)}
+
+/* ---------- 08 RISO ---------- */
+.demo-riso{background-color:#fdf6e3;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");flex-direction:column;text-align:center;overflow:hidden}
+.riso-kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.25em;color:#264653;margin:0 0 .4rem}
+.riso-title{font-family:var(--cond);font-weight:700;font-size:clamp(2.6rem,8vw,4.6rem);line-height:.95;color:#2a9d8f;margin:0;position:relative;mix-blend-mode:multiply}
+.riso-title::before{content:attr(data-text);position:absolute;left:4px;top:-3px;color:#e63946;mix-blend-mode:multiply;opacity:.75;z-index:-1}
+.riso-sub{font-family:var(--mono);font-size:.72rem;color:#264653;margin:.5rem 0 0}
+.riso-sun{position:absolute;width:220px;height:220px;border-radius:50%;right:-50px;top:-50px;background:repeating-radial-gradient(circle,#e63946 0 2px,transparent 2px 7px);opacity:.5;mix-blend-mode:multiply}
+
+/* ---------- 09 SPECTRAL ---------- */
+.demo-spectral{background:radial-gradient(ellipse at 50% 120%,#0b1026 0%,#010102 65%);flex-direction:column;gap:1rem;min-height:330px}
+.sp-orb{width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 38% 35%,#e0f2ff 0%,#7dd3fc 22%,#2563eb 55%,#0b1026 78%);box-shadow:0 0 24px 6px rgba(125,211,252,.8),0 0 70px 22px rgba(37,99,235,.55),0 0 140px 50px rgba(37,99,235,.25)}
+.sp-text{color:#f7f8f8;font-family:var(--mono);letter-spacing:.35em;font-size:.85rem;margin:0;text-shadow:0 0 12px rgba(125,211,252,.9)}
+.sp-text span{display:block;font-size:.6rem;letter-spacing:.2em;color:#8a9ab5;margin-top:.4rem;text-shadow:none}
+
+/* ---------- 10 FLAT VECTOR ---------- */
+.demo-flat{background:#eceff3}
+.fv-card{background:#fff;border-radius:20px;padding:2rem 2.4rem;text-align:center;box-shadow:0 18px 40px rgba(20,30,60,.12);min-width:min(320px,80%)}
+.fv-mark{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:1rem}
+.fv-c{width:64px;height:64px;border-radius:50%;background:#e63946}
+.fv-b{width:64px;height:64px;background:#1d3557;border-radius:14px;margin-left:-20px;mix-blend-mode:multiply}
+.fv-name{font-family:var(--sans);font-weight:800;font-size:1.5rem;letter-spacing:.12em;margin:0}
+.fv-tag{font-size:.85rem;color:var(--muted);margin:.2rem 0 1rem}
+.fv-row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;border-top:2px solid var(--ink);padding-top:.6rem}
+
+.site-footer{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.site-footer a{color:var(--ink)}
+
+@media (max-width:640px){
+  .demo{min-height:240px;margin:1rem}
+  .sb-subject{font-size:4rem}
+  .stitched{-webkit-text-stroke:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}

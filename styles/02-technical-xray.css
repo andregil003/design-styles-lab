@@ -1,0 +1,69 @@
+/* 02 · Technical X-Ray ×15 — SVG/CSS puro */
+:root{
+  --bg:#07090f; --card:#0e1119; --ink:#e8ecf4; --muted:#8b93a7;
+  --line:#232838; --accent:#67e8f9;
+  --mono:ui-monospace,"Cascadia Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --sans:"Helvetica Neue",Arial,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lab-header{max-width:1080px;margin:0 auto;padding:3rem 1.5rem 1rem}
+.eyebrow{font-family:var(--mono);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.eyebrow a{color:var(--accent);text-decoration:none}
+.lab-header h1{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 .5rem;letter-spacing:-.01em}
+.lab-header h1 em{font-style:normal;color:var(--accent)}
+.lede{max-width:64ch;color:var(--muted);margin:0 0 1.2rem}
+.toc{display:flex;flex-wrap:wrap;gap:.45rem}
+.toc a{font-family:var(--mono);font-size:.72rem;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:.3rem .75rem}
+.toc a:hover{background:var(--accent);color:#06121a;border-color:var(--accent)}
+main{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;gap:1.8rem}
+.group{font-family:var(--mono);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:1.5rem 0 -.5rem}
+.bomb{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;scroll-margin-top:1rem}
+.bomb-head{display:flex;gap:.8rem;align-items:baseline;padding:1.1rem 1.3rem 0}
+.bomb-head span{font-family:var(--mono);font-size:.75rem;background:var(--accent);color:#06121a;border-radius:7px;padding:.15rem .5rem;font-weight:700;white-space:nowrap}
+.bomb-head h3{margin:0;font-size:1.25rem}
+.demo{position:relative;overflow:hidden;min-height:250px;margin:1rem 1.3rem;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.xs{width:min(430px,92%);filter:drop-shadow(0 0 12px rgba(103,232,249,.35))}
+.bomb code{display:block;font-family:var(--mono);font-size:.75rem;color:#aeb6c9;background:#04060b;border-top:1px solid var(--line);padding:.7rem 1.3rem;white-space:pre-wrap}
+
+/* contexts */
+.d-dark{background:radial-gradient(ellipse at 50% 35%,#141a29 0%,#07090f 70%)}
+.d-char{background:radial-gradient(ellipse at 50% 35%,#2b2b31 0%,#101014 70%)}
+.d-blue{background:radial-gradient(ellipse at 50% 35%,#123a5e 0%,#050d1f 75%)}
+.d-navy{background:#0a2472}
+.d-sepia{background:#efe4cc}
+.d-print{background:linear-gradient(135deg,#1d6fa5,#0d3f6b)}
+.d-term{background:#020402;justify-content:flex-start}
+.d-paper{background:#f3ecd9}
+.d-hud{background:radial-gradient(ellipse at 50% 120%,#221a08 0%,#050503 70%)}
+.d-gig{background:#f5f200;flex-direction:column;gap:.4rem;text-align:center}
+
+/* terminal */
+.term{font-family:var(--mono);font-size:.82rem;color:#4ade80;margin:0;padding:1.2rem;white-space:pre-wrap}
+.term b{color:#facc15}
+.caret{animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* gig poster */
+.gig-title{font-family:Impact,"Arial Narrow",sans-serif;font-weight:900;font-size:clamp(2.4rem,7vw,4rem);line-height:.95;color:#0a0a0f;margin:1rem 0 0}
+.gig-meta{font-family:var(--mono);font-size:.75rem;letter-spacing:.3em;color:#0a0a0f;margin:0 0 .5rem}
+
+/* layer switcher */
+.switcher{display:flex;gap:.5rem;padding:.9rem 1.3rem 0;flex-wrap:wrap}
+.switcher button{font-family:var(--mono);font-size:.75rem;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.35rem 1rem;cursor:pointer}
+.switcher button.on{background:var(--accent);color:#06121a;border-color:var(--accent);font-weight:700}
+.layers{flex-direction:column;gap:.4rem}
+.layer-label{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0}
+.layer-label b{color:var(--accent)}
+.layers .lyr{display:none}
+.layers[data-layer="skin"] .lyr-skin{display:inline}
+.layers[data-layer="muscle"] .lyr-muscle{display:inline}
+.layers[data-layer="bone"] .lyr-bone{display:inline}
+.layers[data-layer="chip"] .lyr-chip{display:inline}
+
+.lab-footer{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;color:var(--muted);font-size:.85rem}
+.lab-footer a{color:var(--accent);text-decoration:none}
+@media (max-width:640px){.demo{min-height:210px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none !important;transition:none !important}}

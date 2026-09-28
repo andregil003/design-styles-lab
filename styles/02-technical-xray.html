@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>02 · Technical X-Ray ×15 — Design Styles Lab</title>
+<meta name="description" content="15 demos de technical x-ray: sujetos fantasmales + etiquetas de datos. SVG/CSS puro." />
+<link rel="stylesheet" href="02-technical-xray.css" />
+</head>
+<body>
+<header class="lab-header">
+  <p class="eyebrow"><a href="../index.html">← Design Styles Lab</a> · Estilo 02/10</p>
+  <h1>Technical X-Ray <em>×15</em></h1>
+  <p class="lede">Sujetos fantasmales semitransparentes + etiquetas de datos falsas. 7 sujetos clásicos, 7 contextos y 1 demo interactiva con capas de profundidad. Todo SVG/CSS puro.</p>
+  <nav class="toc" aria-label="Demos">
+    <a href="#x1">Circuito</a><a href="#x2">Pez</a><a href="#x3">Teléfono</a><a href="#x4">Botánico</a>
+    <a href="#x5">Reloj</a><a href="#x6">Sneaker</a><a href="#x7">Mano</a><a href="#x8">Blueprint</a>
+    <a href="#x9">Terminal</a><a href="#x10">Museo</a><a href="#x11">HUD</a><a href="#x12">Edificio</a>
+    <a href="#x13">Casco</a><a href="#x14">Poster</a><a href="#x15">★ Scan layers</a>
+  </nav>
+</header>
+
+<main>
+<h2 class="group">Sujetos — qué se escanea</h2>
+
+<section class="bomb" id="x1">
+  <div class="bomb-head"><span>01</span><h3>Circuito fantasma</h3></div>
+  <div class="demo d-dark"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#4ade80" stroke-width="1.5" opacity=".9">
+      <rect x="100" y="40" width="100" height="100" rx="4"/><rect x="120" y="60" width="60" height="60" rx="2"/>
+      <path d="M100 70 H70 V40 H90 M200 70 H230 V110 H210 M130 140 V165 H170 M150 40 V20 H180"/>
+      <circle cx="70" cy="40" r="4"/><circle cx="230" cy="110" r="4"/><circle cx="180" cy="20" r="4"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#86efac">
+      <text x="10" y="25">PCB.SCAN // REV C</text><text x="10" y="40">TRACES 42 · VIAS 17</text>
+      <text x="212" y="160">Ω 4K7 ✓</text>
+    </g></svg></div>
+  <code>x-ray circuit board, translucent traces and chips, monochrome green scan, tiny engineering labels</code>
+</section>
+
+<section class="bomb" id="x2">
+  <div class="bomb-head"><span>02</span><h3>Pez esqueleto</h3></div>
+  <div class="demo d-char"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#e8e8f0" stroke-width="1.5" opacity=".92">
+      <ellipse cx="140" cy="90" rx="70" ry="34"/>
+      <path d="M210 90 L250 60 V120 Z"/>
+      <line x1="140" y1="58" x2="140" y2="122"/><line x1="120" y1="60" x2="120" y2="120"/><line x1="160" y1="60" x2="160" y2="120"/><line x1="180" y1="64" x2="180" y2="116"/>
+      <circle cx="95" cy="82" r="6"/><path d="M70 90 H40 M140 124 V150 M140 56 V36"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#c9c9d8">
+      <text x="12" y="25">SPEC.№ 114 — TELESCOPI</text><text x="12" y="40">COSTAE 23 · MUS. NIL</text>
+      <text x="200" y="160">MUSEO · SALA 4</text>
+    </g></svg></div>
+  <code>x-ray fish skeleton on charcoal radiograph, white skeletal detail, ghostly fins, museum imaging, soft glow</code>
+</section>
+
+<section class="bomb" id="x3">
+  <div class="bomb-head"><span>03</span><h3>Teléfono azul forense</h3></div>
+  <div class="demo d-blue"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#67e8f9" stroke-width="1.5" opacity=".9">
+      <rect x="115" y="20" width="70" height="140" rx="14"/>
+      <rect x="125" y="55" width="50" height="70" rx="2" stroke-dasharray="5 3"/>
+      <circle cx="150" cy="140" r="8"/><line x1="135" y1="32" x2="165" y2="32"/>
+      <rect x="125" y="112" width="50" height="8" rx="2"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#a5f3fc">
+      <text x="10" y="25">EVID.07 // DEVICE</text><text x="10" y="40">BATT 82% · ENC OK</text>
+      <text x="200" y="160">FORENSIC SCAN</text>
+    </g></svg></div>
+  <code>blue x-ray scan of a phone, glowing cyan internals on deep blue, screws and board traces, forensic aesthetic</code>
+</section>
+
+<section class="bomb" id="x4">
+  <div class="bomb-head"><span>04</span><h3>Botánico cyanotype</h3></div>
+  <div class="demo d-navy"><svg viewBox="0 0 300 180" class="xs">
+    <g stroke="#f4f6ff" stroke-width="1" opacity=".35">
+      <line x1="0" y1="45" x2="300" y2="45"/><line x1="0" y1="90" x2="300" y2="90"/><line x1="0" y1="135" x2="300" y2="135"/>
+      <line x1="75" y1="0" x2="75" y2="180"/><line x1="150" y1="0" x2="150" y2="180"/><line x1="225" y1="0" x2="225" y2="180"/>
+    </g>
+    <g fill="none" stroke="#ffffff" stroke-width="2" opacity=".95">
+      <line x1="150" y1="160" x2="150" y2="50"/>
+      <path d="M150 125 C 122 116, 108 92, 112 66 C 138 74, 148 98, 150 125"/>
+      <path d="M150 105 C 178 96, 192 72, 188 46 C 162 54, 152 78, 150 105"/>
+      <circle cx="150" cy="38" r="12" stroke-dasharray="4 3"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#dbe4ff">
+      <text x="12" y="25">GERMINATIO · PL.06</text><text x="196" y="160">SEED Ø 4.2mm</text>
+    </g></svg></div>
+  <code>botanical x-rays in cyanotype style, glowing white seeds and sprouts on deep navy, scientific contact sheet grid</code>
+</section>
+
+<section class="bomb" id="x5">
+  <div class="bomb-head"><span>05</span><h3>Reloj mecánico / patente</h3></div>
+  <div class="demo d-sepia"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#6b4f2a" stroke-width="1.5" opacity=".9">
+      <circle cx="150" cy="90" r="60"/><circle cx="150" cy="90" r="48" stroke-dasharray="3 4"/>
+      <circle cx="150" cy="90" r="14"/><circle cx="118" cy="70" r="12"/><circle cx="182" cy="112" r="10"/>
+      <line x1="150" y1="90" x2="150" y2="48"/><line x1="150" y1="90" x2="180" y2="100"/>
+    </g>
+    <g font-family="Georgia,serif" font-size="10" font-style="italic" fill="#5c4a2e">
+      <text x="12" y="25">fig. 3 — échappement</text><text x="204" y="160">pat. 1842 · pl. II</text>
+    </g></svg></div>
+  <code>antique patent-diagram x-ray of gears and escapement, numbered labels, warm technical manual page, ink linework</code>
+</section>
+
+<section class="bomb" id="x6">
+  <div class="bomb-head"><span>06</span><h3>Sneaker explotado</h3></div>
+  <div class="demo d-dark"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#fb923c" stroke-width="1.5" opacity=".9">
+      <path d="M60 120 C 90 118, 110 100, 140 96 L 230 90 C 245 89, 250 100, 248 112 L 246 122 L 70 128 Z"/>
+      <path d="M140 96 C 150 80, 170 74, 190 78" stroke-dasharray="5 3"/>
+      <line x1="90" y1="128" x2="90" y2="150"/><line x1="150" y1="126" x2="150" y2="150"/><line x1="210" y1="122" x2="210" y2="150"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#fed7aa">
+      <text x="10" y="25">FOAM.CORE // 42.5</text><text x="10" y="40">AIR 78% · DROP 8mm</text>
+      <text x="208" y="165">QC PASS ✓</text>
+    </g></svg></div>
+  <code>exploded x-ray product scan of a sneaker, foam core and air chamber glowing, streetwear techwear labels</code>
+</section>
+
+<section class="bomb" id="x7">
+  <div class="bomb-head"><span>07</span><h3>Mano esquelética</h3></div>
+  <div class="demo d-char"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#e8e8f0" stroke-width="1.6" opacity=".92">
+      <rect x="120" y="100" width="60" height="45" rx="10"/>
+      <line x1="128" y1="100" x2="122" y2="55"/><line x1="144" y1="100" x2="142" y2="45"/><line x1="160" y1="100" x2="162" y2="50"/><line x1="174" y1="102" x2="182" y2="70"/>
+      <line x1="122" y1="78" x2="122" y2="55" stroke-dasharray="3 2"/><line x1="142" y1="72" x2="142" y2="45" stroke-dasharray="3 2"/>
+      <line x1="120" y1="120" x2="88" y2="108"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#c9c9d8">
+      <text x="12" y="25">RADIOGRAPH · L</text><text x="12" y="40">PHALANGES 14/14</text>
+      <text x="212" y="160">kV 52 · mAs 4</text>
+    </g></svg></div>
+  <code>classic medical x-ray of a hand skeleton, charcoal background, clinical annotations, minimal and iconic</code>
+</section>
+
+<h2 class="group">Contextos — dónde se presenta el scan</h2>
+
+<section class="bomb" id="x8">
+  <div class="bomb-head"><span>08</span><h3>Blueprint arquitectónico</h3></div>
+  <div class="demo d-print"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#ffffff" stroke-width="1.5" opacity=".92">
+      <rect x="60" y="50" width="180" height="90"/><line x1="60" y1="95" x2="240" y2="95"/>
+      <rect x="80" y="65" width="30" height="30"/><rect x="190" y="65" width="30" height="30"/>
+      <path d="M140 95 V140 H180" stroke-dasharray="5 3"/>
+      <circle cx="140" cy="140" r="3"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#ffffff">
+      <text x="10" y="25">PLANO · NIVEL 02</text><text x="196" y="165">ESC 1:50 · NORTE ↑</text>
+    </g></svg></div>
+  <code>white architectural blueprint drawings on deep cyan-blue paper, floor plan fragments, section marks, faded archival scan</code>
+</section>
+
+<section class="bomb" id="x9">
+  <div class="bomb-head"><span>09</span><h3>Terminal de escaneo</h3></div>
+  <div class="demo d-term"><pre class="term">$ scan --deep /dev/sujeto
+▓▓▓▓▓▓▓▓▓▓ 100% · 42 capas
+> hueso ......... OK
+> tejido ........ OK
+> circuito ...... OK
+> anomalía ...... <b>1 DETECTADA</b>
+$ aislar anomalía [s/N] <span class="caret">█</span></pre></div>
+  <code>terminal-style scan readout, monospace green on black, progress bars, CLI aesthetic, developer-focused x-ray</code>
+</section>
+
+<section class="bomb" id="x10">
+  <div class="bomb-head"><span>10</span><h3>Placa de museo</h3></div>
+  <div class="demo d-paper"><svg viewBox="0 0 300 180" class="xs">
+    <rect x="70" y="25" width="160" height="110" fill="none" stroke="#5c5546" stroke-width="1.5"/>
+    <g fill="none" stroke="#5C6B4E" stroke-width="2">
+      <line x1="150" y1="120" x2="150" y2="55"/>
+      <path d="M150 100 C 128 94, 118 76, 121 58 C 140 64, 148 82, 150 100"/>
+      <path d="M150 88 C 172 82, 182 64, 179 46 C 160 52, 152 70, 150 88"/>
+    </g>
+    <g font-family="Georgia,serif" font-size="10" font-style="italic" fill="#5c5546">
+      <text x="82" y="150">Herbarium · lámina XIV</text>
+      <text x="196" y="60">leg. A. Gil</text>
+    </g></svg></div>
+  <code>museum herbarium plate, pressed specimen scan on aged paper, serif annotations, vitrine-like negative space</code>
+</section>
+
+<section class="bomb" id="x11">
+  <div class="bomb-head"><span>11</span><h3>HUD táctico</h3></div>
+  <div class="demo d-hud"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#facc15" stroke-width="1.5" opacity=".9">
+      <circle cx="150" cy="90" r="55"/><circle cx="150" cy="90" r="40" stroke-dasharray="6 4"/>
+      <line x1="150" y1="10" x2="150" y2="35"/><line x1="150" y1="145" x2="150" y2="170"/>
+      <line x1="70" y1="90" x2="95" y2="90"/><line x1="205" y1="90" x2="230" y2="90"/>
+      <circle cx="150" cy="90" r="4"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#fde68a">
+      <text x="10" y="25">TGT LOCK · 042</text><text x="10" y="40">DIST 12.4m · CONF 98%</text>
+      <text x="216" y="165">◉ REC</text>
+    </g></svg></div>
+  <code>tactical HUD targeting overlay, amber reticle on dark feed, lock-on brackets, gaming and drone aesthetic</code>
+</section>
+
+<section class="bomb" id="x12">
+  <div class="bomb-head"><span>12</span><h3>Sección de edificio</h3></div>
+  <div class="demo d-blue"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#67e8f9" stroke-width="1.5" opacity=".9">
+      <rect x="90" y="30" width="120" height="120"/>
+      <line x1="90" y1="70" x2="210" y2="70"/><line x1="90" y1="110" x2="210" y2="110"/>
+      <line x1="130" y1="30" x2="130" y2="150" stroke-dasharray="5 3"/>
+      <rect x="140" y="80" width="24" height="30"/><circle cx="180" cy="50" r="8"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#a5f3fc">
+      <text x="10" y="25">CORTE A–A' · TORRE</text><text x="10" y="40">NIVELES 03 · H 12m</text>
+      <text x="200" y="165">HVAC ✓</text>
+    </g></svg></div>
+  <code>architectural section x-ray of a building, floor slabs and ducts glowing, engineering cutaway, cyan on navy</code>
+</section>
+
+<section class="bomb" id="x13">
+  <div class="bomb-head"><span>13</span><h3>Casco astronauta</h3></div>
+  <div class="demo d-dark"><svg viewBox="0 0 300 180" class="xs">
+    <g fill="none" stroke="#c4b5fd" stroke-width="1.5" opacity=".9">
+      <circle cx="150" cy="90" r="55"/>
+      <circle cx="150" cy="90" r="40" stroke-dasharray="4 3"/>
+      <circle cx="135" cy="82" r="6"/><circle cx="165" cy="82" r="6"/>
+      <path d="M132 108 Q 150 120 168 108"/>
+      <rect x="100" y="130" width="100" height="16" rx="8"/>
+    </g>
+    <g font-family="ui-monospace,monospace" font-size="9" fill="#ddd6fe">
+      <text x="10" y="25">EVA.HELM // M7</text><text x="10" y="40">O₂ 94% · PRES OK</text>
+      <text x="206" y="160">VISOR ◐</text>
+    </g></svg></div>
+  <code>astronaut helmet x-ray scan, violet ghost shell, oxygen and pressure telemetry, space-tech poster vibes</code>
+</section>
+
+<section class="bomb" id="x14">
+  <div class="bomb-head"><span>14</span><h3>Poster gig radiográfico</h3></div>
+  <div class="demo d-gig">
+    <p class="gig-title">PULSO<br />ELÉCTRICO</p>
+    <p class="gig-meta">12 OCT · FORO SOL · 21:00</p>
+    <svg viewBox="0 0 300 60" class="xs" aria-hidden="true">
+      <g fill="none" stroke="#0a0a0f" stroke-width="2">
+        <path d="M0 30 H80 L95 10 H115 L130 50 H150 L165 10 H185 L200 50 H220 L235 10 H300"/>
+      </g>
+    </svg>
+  </div>
+  <code>gig poster in x-ray style, spectral waveform skeleton, huge condensed type, fluorescent inks on dark paper</code>
+</section>
+
+<h2 class="group">Cierre — la joya interactiva</h2>
+
+<section class="bomb" id="x15">
+  <div class="bomb-head"><span>15 ★</span><h3>Scan Layers — pela el sujeto por capas</h3></div>
+  <div class="switcher" role="group" aria-label="Capas de scan">
+    <button data-l="skin" class="on">piel</button><button data-l="muscle">músculo</button><button data-l="bone">hueso</button><button data-l="chip">circuito</button>
+  </div>
+  <div class="demo d-dark layers" data-layer="skin">
+    <svg viewBox="0 0 300 180" class="xs">
+      <g class="lyr lyr-skin" fill="none" stroke="#f9a8d4" stroke-width="2" opacity=".9">
+        <rect x="115" y="25" width="70" height="130" rx="30"/>
+      </g>
+      <g class="lyr lyr-muscle" fill="none" stroke="#f87171" stroke-width="1.5" opacity=".9">
+        <rect x="125" y="35" width="50" height="110" rx="20" stroke-dasharray="6 3"/>
+        <line x1="150" y1="35" x2="150" y2="145"/>
+      </g>
+      <g class="lyr lyr-bone" fill="none" stroke="#e8e8f0" stroke-width="1.6" opacity=".95">
+        <line x1="150" y1="40" x2="150" y2="140"/><line x1="135" y1="70" x2="165" y2="70"/><line x1="135" y1="100" x2="165" y2="100"/><line x1="135" y1="125" x2="165" y2="125"/>
+      </g>
+      <g class="lyr lyr-chip" fill="none" stroke="#4ade80" stroke-width="1.4" opacity=".9">
+        <rect x="138" y="60" width="24" height="24"/><path d="M138 66 H125 M162 66 H175 M138 78 H125 M162 78 H175 M150 60 V45 M150 84 V100"/>
+        <circle cx="125" cy="66" r="2.5"/><circle cx="175" cy="78" r="2.5"/>
+      </g>
+    </svg>
+    <p class="layer-label">capa: <b>piel</b> · 42 capas totales</p>
+  </div>
+  <code>interactive depth scan — peel one subject through skin, muscle, bone and circuit layers. Toggle labels per layer.</code>
+</section>
+</main>
+
+<footer class="lab-footer">
+  <p><a href="../index.html">← volver a los 10 estilos</a> · Technical X-Ray ×15 · SVG puro · MIT</p>
+</footer>
+<script>
+const names={skin:'piel',muscle:'músculo',bone:'hueso',chip:'circuito'};
+document.querySelectorAll('.switcher button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.switcher button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  const box=document.querySelector('.layers');box.dataset.layer=b.dataset.l;
+  box.querySelector('.layer-label b').textContent=names[b.dataset.l];
+}));
+</script>
+</body>
+</html>
