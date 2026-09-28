@@ -2,7 +2,7 @@
 
 Galería de **10 estilos de diseño nicho** con demos vivas 100% offline (CSS/SVG puro, cero imágenes externas) + receta de prompt reutilizable por estilo.
 
-Ver en vivo: Cloudflare Pages (pendiente de deploy).
+Ver en vivo: https://andregil003.github.io/design-styles-lab/ (GitHub Pages, público).
 
 ## Los 10
 
