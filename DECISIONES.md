@@ -37,3 +37,19 @@
 - **15 Flow:** `styles/15-flow.*` (un motor canvas de ~40 líneas, 15 configs por `data-*`; lab con sliders; rAF cancelable).
 - **Index:** 5 tarjetas nuevas (11–15) + TOC + título actualizados.
 - **Pendiente:** skill `design-styles-lab`, deploy público.
+## 2026-09-30 — Estilo 16 Trending Effects ×2
+- **Decisión:** `styles/16-trending-effects.html` + `.css` (thermal FLIR con switch low/mid/high + CRT fósforo con power on/off). Prompts re-redactados propios, foco preservado; imágenes del Notion no copiadas.
+- **Por qué:** caza hunterPuck de página Notion "Trending EFFECTS prompts" (2 efectos). Son edit-prompts, no estilos de catálogo ×15 — se publican como par simple honesto, sin inflar a 15. Smoke de `fal-ai-image --help` OK; generación real pendiente (sin FAL_KEY).
+## 2026-09-30 — Estilo 17 Estilos para IA ×13 (nombre general, sin "reel")
+- **Decisión:** `styles/17-estilos-ia.html` + `.css` (port de la skill: 13 tarjetas con demo + prompt + paleta, CSS separado, header/toc/footer del repo). Sin la palabra "reel" en ningún lado: es un catálogo general de recetas para IA.
+- **Por qué:** la skill ya tenía este contenido y el repo no — se sincronizan para que la galería pública y la skill no diverjan.
+- **Joya:** filtro por ambiente (todos/neón/oscuro/claro/retro) con `data-mood` + acento de color por tarjeta, números 01–13, hover lift. Detalle extra por demo: grano VHS en dreamcore, ojo vigilante en dark fantasy, estrellas en candy, "Nº 001" en toy, ticker en punk.
+## 2026-09-30 — Rewrite total 16+17 (borrón y cuenta nueva, pedido de André)
+- **Decisión:** 16 pasa de ×2 a ×8 (retrato + paisaje + escala + HUD conmutable + terminal + scan-lab con sliders + apagado CRT con colapso + estática animada). 17 suma filtro + detalles por demo. Se borran `17-reel-parte4.*` (renombre general).
+- **Por qué:** la primera versión se veía barata y vaga. Más densidad, más controles reales, mismos prompts (André los aprobó) y misma regla offline.
+## 2026-09-30 — +10 y +10 (pedido de André: más de lo mismo, pero bueno)
+- **16 → ×18:** T5 multitud (3 firmas), T6 motor (núcleo pulsante), T7 termómetro, T8 huellas que se enfrían, T9 visor dron FPV; C5 BIOS POST, C6 reloj con hora viva (JS), C7 ecualizador 12 barras, C8 insert coin, C9 radar con barrido.
+- **17 → ×23:** vaporwave, memphis, cyber calle, holográfico (hue-rotate), noir, kawaii, glitch RGB-split, origami, blueprint, cottage. Filtros existentes los cubren (moods ya definidos).
+## 2026-09-30 — Dedup 16 (×18→×14, pedido de André: quitar lo que se repite)
+- **Fuera 4:** T4 HUD táctico (se pisaba con T9 visor dron) · C2 scan-lab (scanlines ya en 14-pixel) · C5 BIOS (misma pantalla mono que C1 terminal, que guarda el prompt) · C8 insert coin (arcade ya en 14-pixel).
+- **Renumerado 01–14** sin huecos; CSS/JS muertos eliminados (t-hudex, c-lab, c-coin, c-bios + handlers). Quedan 3 joyas: heat, apagado CRT, reloj vivo.

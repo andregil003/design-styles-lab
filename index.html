@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Design Styles Lab — 15 estilos nicho</title>
-<meta name="description" content="Galería de 10 estilos de diseño nicho con demos en CSS/SVG puro y recetas de prompt reutilizables." />
+<title>Design Styles Lab — 17 estilos nicho</title>
+<meta name="description" content="Galería de 17 estilos de diseño nicho con demos en CSS/SVG puro y recetas de prompt reutilizables." />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="site-header">
   <p class="eyebrow">Design Styles Lab</p>
-  <h1>15 estilos nicho <em>para robar</em></h1>
+  <h1>17 estilos nicho <em>para robar</em></h1>
   <p class="lede">Cada estilo trae demo viva en CSS/SVG puro (cero imágenes externas, cero peso) + su receta de prompt para replicarlo con IA o a mano.</p>
   <nav class="toc" aria-label="Índice de estilos">
     <a href="#sticker-bomb">01 Sticker Bomb</a>
@@ -28,6 +28,8 @@
     <a href="#darkluxe">13 Dark Luxe</a>
     <a href="#pixel">14 Pixel Retro</a>
     <a href="#flow">15 Flow Fields</a>
+    <a href="#trending">16 Trending Effects</a>
+    <a href="#estilos-ia">17 Estilos para IA</a>
   </nav>
 </header>
 
@@ -296,10 +298,43 @@
     <p class="made">★ <a href="styles/15-flow.html">Ver los 15 demos de este estilo →</a></p>
   </div>
 </section>
+
+<!-- 16 -->
+<section class="style" id="trending">
+  <div class="style-head"><span class="num">16</span><div><h2>Trending Effects</h2><p>Thermal FLIR + CRT de fósforo verde. Efectos virales para foto-edición.</p></div></div>
+  <div class="demo" style="background:linear-gradient(160deg,#06122e 0%,#0a2a6b 30%,#0e7f8c 50%,#e8b400 70%,#c00 100%);flex-direction:column;gap:.4rem;font-family:monospace">
+    <p style="margin:0;color:#bff3ff;font-size:.7rem;letter-spacing:.2em;text-shadow:0 0 6px #0ff">36.6°C ● REC</p>
+    <p style="margin:0;color:#ffe45e;font-size:1.8rem;font-weight:900;text-shadow:0 0 18px #ff7a00">THERMAL</p>
+  </div>
+  <div class="demo" style="background:#000;flex-direction:column">
+    <p style="margin:0;font-family:monospace;font-weight:700;font-size:1.6rem;letter-spacing:3px;color:#c8ffd8;text-shadow:0 0 8px #39ff14,0 0 24px #39ff14;background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.45) 2px 4px),radial-gradient(ellipse at 50% 45%,#0a3d1a,#000 80%);padding:.6rem 1.4rem;border-radius:14px">SIGNAL</p>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> gaming táctico, HUDs, retro tech, terror analógico.</p>
+    <code>thermal: FLIR false-color navy/cyan to yellow/orange/red, heat bloom, sensor grain, minimal HUD · CRT: single green channel, scanlines, phosphor bloom, vignette, barrel warp</code>
+    <p class="made">Hecho con: CSS puro · Skills: <span>fal-ai-image</span> <span>stable-diffusion-local</span></p>
+    <p class="made">★ <a href="styles/16-trending-effects.html">Ver los 14 demos trending →</a></p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="style" id="estilos-ia">
+  <div class="style-head"><span class="num">17</span><div><h2>Estilos para IA</h2><p>23 recetas con demo viva: chicha, hyperbloom, vaporwave, glitch y más. Filtra por ambiente.</p></div></div>
+  <div class="demo" style="background:#000;flex-direction:column;gap:.5rem">
+    <p style="margin:0;font-family:cursive;font-size:2rem;background:linear-gradient(90deg,#39ff14,#ffe600,#ff8000,#ff1493);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 12px #ff1493)">Chicha</p>
+    <p style="margin:0;color:#888;font-size:.7rem;letter-spacing:.3em">+ 22 ESTILOS →</p>
+  </div>
+  <div class="recipe">
+    <p><strong>Úsalo en:</strong> posters, heroes, zines, gaming, packaging.</p>
+    <code>13 prompt recipes: chicha neon, hyperbloom, dreamcore, neotribal chrome, punk zine, plastic, candy, folk, retro sport, toy world, dark fantasy, paper cut, Y2K retro tech</code>
+    <p class="made">Hecho con: CSS puro · Skills: <span>fal-ai-image</span> <span>retro-diffusion</span></p>
+    <p class="made">★ <a href="styles/17-estilos-ia.html">Ver los 23 estilos para IA →</a></p>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">
-  <p>Design Styles Lab · 15 estilos · demos 100% offline (CSS/SVG) · hecho junto con André 🤝</p>
+  <p>Design Styles Lab · 17 estilos · demos 100% offline (CSS/SVG) · hecho junto con André 🤝</p>
   <p><a href="https://github.com/andregil003/design-styles-lab">repo</a> · MIT</p>
 </footer>
 </body>

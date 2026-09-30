@@ -1,0 +1,156 @@
+/* 16 · Trending Effects — thermal FLIR + CRT fósforo (CSS puro, cero imágenes) */
+:root{--bg:#111;--card:#1a1a1a;--ink:#f5f1e8;--mut:#999;--acc:#8fd18f;
+--mono:ui-monospace,"Courier New",monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,sans-serif;line-height:1.6}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.lab-header{max-width:1080px;margin:0 auto;padding:3rem 1.5rem 1rem}
+.eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:0 0 .5rem}
+.eyebrow a{color:var(--acc);text-decoration:none}
+.lab-header h1{font-size:clamp(2rem,5vw,3.2rem);margin:0 0 .5rem}
+.lede{max-width:64ch;color:var(--mut);margin:0 0 1.2rem;font-size:.9rem}
+.toc{display:flex;flex-wrap:wrap;gap:.45rem}
+.toc a{font-size:.72rem;color:var(--ink);text-decoration:none;border:1px solid #444;padding:.3rem .7rem;border-radius:20px}
+.toc a:hover{border-color:var(--acc);color:var(--acc)}
+main{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;gap:1.8rem}
+.group{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;color:var(--acc);margin:1.5rem 0 -.5rem}
+.bomb{background:var(--card);border:1px solid #333;border-radius:12px;overflow:hidden;scroll-margin-top:1rem}
+.bomb-head{display:flex;gap:.8rem;align-items:baseline;flex-wrap:wrap;padding:1rem 1.2rem 0}
+.bomb-head span{background:var(--acc);color:#111;font-weight:700;font-size:.72rem;padding:.15rem .5rem;border-radius:4px}
+.bomb-head h3{margin:0;font-size:1.1rem}
+.bomb-head small{color:var(--mut)}
+.demo{position:relative;overflow:hidden;min-height:230px;margin:1rem 1.2rem;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.bomb code{display:block;font-size:.72rem;color:#d8d8d8;background:#0d0d0d;border-top:1px solid #2a2a2a;padding:.7rem 1.2rem;white-space:pre-wrap}
+.variant{display:block;font-size:.72rem;color:var(--mut);background:#0d0d0d;border-top:1px solid #2a2a2a;padding:.5rem 1.2rem}
+.variant b{color:var(--acc)}
+.pal{display:flex;height:18px;margin:.7rem 1.2rem;border-radius:5px;overflow:hidden}
+.pal i{flex:1}
+.switcher{padding:.9rem 1.2rem 0;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.switcher button{font:inherit;font-size:.75rem;background:#0d0d0d;color:var(--ink);border:1px solid #444;border-radius:8px;padding:.45rem .9rem;cursor:pointer}
+.switcher button:hover{border-color:var(--acc)}
+.switcher button[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
+.switcher label{font-size:.75rem;color:var(--mut);display:flex;gap:.4rem;align-items:center}
+.switcher input[type="range"]{accent-color:var(--acc)}
+/* — T1 retrato térmico: busto + focos calientes + HUD — */
+.t-portrait{background:radial-gradient(circle at 70% 20%,#e05300 0%,transparent 34%),radial-gradient(circle at 20% 80%,#0e7f8c 0%,transparent 40%),linear-gradient(160deg,#06122e,#0a2a6b 55%,#123)}
+.t-portrait .bust{position:relative;width:120px;height:150px;filter:drop-shadow(0 0 16px rgba(255,120,0,.8))}
+.t-portrait .bust::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#fff8d0,#ffd23e 45%,#ff7a00 78%,#a00)}
+.t-portrait .bust::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:110px;height:92px;border-radius:46px 46px 14px 14px;background:linear-gradient(#ffe45e,#ff9a1f 55%,#c33)}
+.t-portrait[data-heat="low"] .bust{filter:drop-shadow(0 0 7px rgba(255,120,0,.5)) saturate(.65)}
+.t-portrait[data-heat="high"] .bust{filter:drop-shadow(0 0 26px rgba(255,60,0,.95)) saturate(1.35)}
+.hud{position:absolute;inset:10px;pointer-events:none;font-family:var(--mono);font-size:10px;color:#bff3ff;text-shadow:0 0 6px #0ff}
+.hud i{position:absolute;width:18px;height:18px;border:2px solid #bff3ff}
+.hud i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.hud i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.hud i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.hud i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.hud .tele{position:absolute;top:2px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.55);padding:2px 8px;border-radius:4px;letter-spacing:1px;white-space:nowrap}
+.hud .box{position:absolute;border:1px solid #ff5a5a;box-shadow:0 0 8px rgba(255,90,90,.7)}
+.hud .box::after{content:attr(data-l);position:absolute;top:-14px;left:0;font-size:9px;color:#ff8a8a;text-shadow:none}
+.sweep{position:absolute;left:0;right:0;height:30px;top:-34px;background:linear-gradient(transparent,rgba(255,255,255,.25),transparent);animation:sweep 3.4s linear infinite}
+@keyframes sweep{to{transform:translateY(300px)}}
+/* — T2 paisaje nocturno: 3 cordilleras frías→cálidas + sol caliente — */
+.t-city{background:linear-gradient(#040818 60%,#0a2a6b 100%)}
+.t-city .m{position:absolute;left:0;right:0;bottom:0}
+.t-city .m1{height:45%;background:linear-gradient(#12325e,#0e7f8c);clip-path:polygon(0 100%,0 55%,12% 30%,24% 58%,36% 22%,48% 60%,60% 35%,72% 62%,84% 28%,100% 55%,100% 100%)}
+.t-city .m2{height:32%;background:linear-gradient(#e8b400,#e05300);clip-path:polygon(0 100%,0 65%,15% 35%,30% 70%,45% 30%,60% 68%,75% 38%,90% 66%,100% 45%,100% 100%);opacity:.92}
+.t-city .m3{height:20%;background:linear-gradient(#ff7a00,#c00);clip-path:polygon(0 100%,0 70%,20% 40%,40% 75%,60% 45%,80% 72%,100% 50%,100% 100%)}
+.t-city .sun{position:absolute;top:16%;right:20%;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle,#fff,#ffd23e 55%,transparent 72%);box-shadow:0 0 24px 8px rgba(255,160,40,.8)}
+.t-city .grid{position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 22px,rgba(140,220,255,.12) 22px 23px),repeating-linear-gradient(90deg,transparent 0 22px,rgba(140,220,255,.12) 22px 23px)}
+/* — T3 escala de calor: leyenda FLIR — */
+.t-scale{background:#05070f;flex-direction:column;gap:.7rem;padding:1.4rem}
+.t-scale .bar{width:86%;height:30px;border-radius:6px;background:linear-gradient(90deg,#06122e,#0a2a6b,#0e7f8c,#e8b400,#e05300,#c00);box-shadow:0 0 18px rgba(224,83,0,.45);position:relative}
+.t-scale .ticks{width:86%;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--mut)}
+.t-scale .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.25em;color:#ffd23e}
+/* — C1 terminal: pantalla con cursor + led — */
+.t-crt{background:#000;border-radius:18px}
+.scr{position:relative;width:86%;min-height:170px;background:radial-gradient(ellipse at 50% 42%,#0a3d1a 0%,#04170b 55%,#000 100%);border-radius:22px/30px;box-shadow:inset 0 0 60px #000,0 0 24px rgba(57,255,20,.15);overflow:hidden;padding:1rem 1.2rem;font-family:var(--mono);font-size:12px;line-height:1.7;color:#c8ffd8;text-shadow:0 0 7px #39ff14}
+.scr::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.45) 2px 4px);pointer-events:none}
+.scr::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.78) 100%);pointer-events:none}
+.scr .cur{display:inline-block;width:8px;height:14px;background:#39ff14;vertical-align:-2px;animation:blink 1s steps(2) infinite;box-shadow:0 0 8px #39ff14}
+@keyframes blink{50%{opacity:0}}
+.scr .dim{color:#3f7a4d;text-shadow:none}
+.led{position:absolute;bottom:8px;right:14px;width:8px;height:8px;border-radius:50%;background:#39ff14;box-shadow:0 0 8px #39ff14}
+/* — C3 apagado CRT: colapso a línea — */
+.c-power .scr{transition:transform .28s ease-in,opacity .3s .22s}
+.c-power.off .scr{transform:scaleY(.012);opacity:0}
+.c-power .flash{position:absolute;inset:0;background:#c8ffd8;opacity:0;pointer-events:none}
+.c-power.off .flash{animation:flash .3s ease-out}
+@keyframes flash{0%{opacity:.9}100%{opacity:0}}
+/* — C4 estática: ruido animado + canal — */
+.c-noise .scr{display:flex;align-items:center;justify-content:center}
+.static{position:absolute;inset:0;background:repeating-conic-gradient(rgba(200,255,216,.14) 0 .00008turn,transparent .00008turn .0002turn),repeating-linear-gradient(0deg,rgba(200,255,216,.1) 0 1px,transparent 1px 3px);animation:grain .35s steps(3) infinite}
+@keyframes grain{0%{transform:translate(0,0)}33%{transform:translate(-6px,4px)}66%{transform:translate(5px,-5px)}100%{transform:translate(0,0)}}
+.chan{position:relative;font-family:var(--mono);font-size:26px;letter-spacing:4px;color:#c8ffd8;text-shadow:0 0 10px #39ff14,0 0 30px #39ff14}
+/* — T5 multitud: tres firmas, tres temperaturas — */
+.t-crowd{background:linear-gradient(#040818,#0a2a6b 80%)}
+.t-crowd .ppl{display:flex;gap:30px;align-items:flex-end}
+.t-crowd .p{width:46px;height:84px;position:relative}
+.t-crowd .p::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:26px;height:26px;border-radius:50%}
+.t-crowd .p::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:44px;height:56px;border-radius:20px 20px 8px 8px}
+.t-crowd .p.cold::before{background:radial-gradient(circle at 50% 40%,#dffaff,#0e7f8c 60%,#0a2a6b)}
+.t-crowd .p.cold::after{background:linear-gradient(#0e7f8c,#0a2a6b)}
+.t-crowd .p.cold{filter:drop-shadow(0 0 8px rgba(14,127,140,.8))}
+.t-crowd .p.warm::before{background:radial-gradient(circle at 50% 40%,#fff8d0,#e8b400 55%,#e05300)}
+.t-crowd .p.warm::after{background:linear-gradient(#e8b400,#e05300)}
+.t-crowd .p.warm{filter:drop-shadow(0 0 12px rgba(232,180,0,.85))}
+.t-crowd .p.hot::before{background:radial-gradient(circle at 50% 40%,#fff,#ff7a00 60%,#c00)}
+.t-crowd .p.hot::after{background:linear-gradient(#ff9a1f,#c00)}
+.t-crowd .p.hot{filter:drop-shadow(0 0 18px rgba(255,60,0,.9))}
+/* — T6 motor caliente: núcleo + rejillas — */
+.t-motor{background:linear-gradient(#0b0e1a,#04050c);flex-direction:column;gap:.6rem}
+.t-motor .eng{width:220px;height:110px;border-radius:12px;background:linear-gradient(#1a2033,#0b0e1a);border:2px solid #2a3350;position:relative;overflow:hidden}
+.t-motor .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:radial-gradient(circle,#fff8d0,#ffd23e 40%,#ff7a00 68%,transparent 75%);box-shadow:0 0 30px 12px rgba(255,140,20,.65);animation:core 2.4s ease-in-out infinite}
+@keyframes core{50%{box-shadow:0 0 44px 18px rgba(255,140,20,.85)}}
+.t-motor .vents{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 18px,rgba(0,0,0,.65) 18px 24px)}
+.t-motor .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:#ffb35e}
+/* — T7 termómetro: tubo + bulbo + lectura — */
+.t-termo{background:#05070f}
+.t-termo .tube{width:34px;height:170px;border-radius:17px;background:#0b1226;border:2px solid #2a3350;position:relative;overflow:hidden}
+.t-termo .merc{position:absolute;bottom:0;left:0;right:0;height:64%;background:linear-gradient(#ffd23e,#ff7a00 60%,#c00);box-shadow:0 0 18px rgba(255,140,20,.8)}
+.t-termo .tube::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 14px,rgba(191,243,255,.35) 14px 15px)}
+.t-termo .bulb{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#ffd23e,#ff7a00 55%,#a00);box-shadow:0 0 26px rgba(255,140,20,.9);margin-top:-8px}
+.t-termo .read{font-family:var(--mono);font-size:22px;color:#ffd23e;text-shadow:0 0 12px rgba(255,180,60,.8);margin-left:18px}
+/* — T8 huellas: rastro que se enfría — */
+.t-trail{background:linear-gradient(#040818,#06122e)}
+.t-trail .steps{display:flex;gap:14px}
+.t-trail .steps span{width:26px;height:42px;border-radius:50%;background:radial-gradient(ellipse,#ffd23e,#e05300 65%,transparent 75%)}
+.t-trail .steps span:nth-child(1){opacity:.15;transform:rotate(-12deg)}
+.t-trail .steps span:nth-child(2){opacity:.3;transform:rotate(10deg);margin-top:14px}
+.t-trail .steps span:nth-child(3){opacity:.5;transform:rotate(-10deg)}
+.t-trail .steps span:nth-child(4){opacity:.7;transform:rotate(12deg);margin-top:14px}
+.t-trail .steps span:nth-child(5){opacity:1;transform:rotate(-8deg);box-shadow:0 0 16px rgba(255,140,20,.8)}
+/* — T9 visor dron: primera persona — */
+.t-fpv{background:radial-gradient(circle at 50% 60%,#12325e,#040818 75%)}
+.t-fpv .cross{width:130px;height:130px;position:relative}
+.t-fpv .cross::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(191,243,255,.9)}
+.t-fpv .cross::after{content:"+";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#bff3ff;font-size:34px;text-shadow:0 0 8px #0ff}
+.t-fpv .top{position:absolute;top:12px;left:0;right:0;display:flex;justify-content:space-between;padding:0 16px;font-family:var(--mono);font-size:10px;color:#bff3ff}
+.t-fpv .rec{color:#ff6b6b}
+.t-fpv .rec::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#f00;margin-right:5px;animation:blink 1s steps(2) infinite}
+/* — C6 reloj: dígitos vivos — */
+.c-clock .scr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem}
+.c-clock .clock{font-size:44px;letter-spacing:6px;text-shadow:0 0 10px #39ff14,0 0 34px #39ff14}
+.c-clock .alarm{font-size:11px;color:#3f7a4d;letter-spacing:.3em}
+/* — C7 ecualizador: 12 barras — */
+.c-eq .scr{display:flex;align-items:flex-end;justify-content:center;gap:7px;padding-bottom:1.4rem}
+.c-eq .scr span{width:12px;background:#39ff14;box-shadow:0 0 10px #39ff14;animation:eq 1s ease-in-out infinite}
+.c-eq .scr span:nth-child(1){height:30%;animation-delay:0s}.c-eq .scr span:nth-child(2){height:70%;animation-delay:.12s}
+.c-eq .scr span:nth-child(3){height:45%;animation-delay:.24s}.c-eq .scr span:nth-child(4){height:90%;animation-delay:.06s}
+.c-eq .scr span:nth-child(5){height:55%;animation-delay:.3s}.c-eq .scr span:nth-child(6){height:80%;animation-delay:.18s}
+.c-eq .scr span:nth-child(7){height:35%;animation-delay:.36s}.c-eq .scr span:nth-child(8){height:65%;animation-delay:.1s}
+.c-eq .scr span:nth-child(9){height:50%;animation-delay:.28s}.c-eq .scr span:nth-child(10){height:85%;animation-delay:.2s}
+.c-eq .scr span:nth-child(11){height:40%;animation-delay:.34s}.c-eq .scr span:nth-child(12){height:60%;animation-delay:.14s}
+@keyframes eq{50%{transform:scaleY(.35)}}
+/* — C9 radar: barrido circular — */
+.c-radar .scr{display:flex;align-items:center;justify-content:center}
+.radar{width:150px;height:150px;border-radius:50%;border:2px solid rgba(57,255,20,.7);position:relative;background:repeating-radial-gradient(circle,transparent 0 22px,rgba(57,255,20,.25) 22px 23px);overflow:hidden}
+.radar::before{content:"";position:absolute;inset:0;background:conic-gradient(from 0deg,rgba(57,255,20,.8),transparent 22%);animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.radar::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,transparent 58%,rgba(0,0,0,.7) 100%)}
+.blip{position:absolute;width:7px;height:7px;border-radius:50%;background:#c8ffd8;box-shadow:0 0 8px #39ff14;animation:blink 2s steps(2) infinite}
+.lab-footer{max-width:1080px;margin:0 auto;padding:0 1.5rem 3rem;color:var(--mut);font-size:.75rem}
+.lab-footer a{color:var(--acc);text-decoration:none}
+@media (max-width:640px){.demo{min-height:190px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none !important;transition:none !important}}

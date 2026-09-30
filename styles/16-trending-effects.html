@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>16 · Trending Effects ×14 — Design Styles Lab</title>
+<meta name="description" content="Thermal FLIR surveillance y CRT de fósforo verde: 14 demos CSS puro con laboratorios interactivos + prompts propios." />
+<link rel="stylesheet" href="16-trending-effects.css" />
+</head>
+<body>
+<header class="lab-header">
+  <p class="eyebrow"><a href="../index.html">← Design Styles Lab</a> · Estilo 16/17</p>
+  <h1>Trending Effects</h1>
+  <p class="lede">Dos efectos virales para foto-edición con IA: vigilancia térmica FLIR y monitor CRT de fósforo verde. Demos 100% CSS (cero imágenes) + prompts re-redactados con palabras propias. Inspiración: página Notion "Trending EFFECTS prompts" (las imágenes del Notion no se copian).</p>
+  <nav class="toc" aria-label="Demos">
+    <a href="#t1">Retrato</a><a href="#t2">Paisaje</a><a href="#t3">Escala</a><a href="#t5">Multitud</a><a href="#t6">Motor</a><a href="#t7">Termómetro</a><a href="#t8">Huellas</a><a href="#t9">Dron ★</a><a href="#c1">Terminal</a><a href="#c3">Apagado ★</a><a href="#c4">Estática</a><a href="#c6">Reloj ★</a><a href="#c7">Ecualizador</a><a href="#c9">Radar</a>
+  </nav>
+</header>
+
+<main>
+<h2 class="group">Thermal — falso-color + máquina</h2>
+
+<section class="bomb" id="t1"><div class="bomb-head"><span>01</span><h3>Retrato térmico</h3><small>busto caliente + focos + barrido</small></div>
+<div class="demo t-portrait" data-heat="mid" id="portraitDemo">
+  <div class="sweep"></div><div class="bust"></div>
+  <div class="hud"><i></i><i></i><i></i><i></i><span class="tele">36.6&deg;C &#9679; REC</span><span class="box" data-l="SUJETO" style="left:58%;top:30%;width:64px;height:80px"></span></div>
+</div>
+<div class="switcher" role="group" aria-label="Nivel de calor"><button data-h="low" aria-pressed="false">heat low</button><button data-h="mid" aria-pressed="true">heat mid</button><button data-h="high" aria-pressed="false">heat high</button></div>
+<div class="pal"><i style="background:#06122e"></i><i style="background:#0e7f8c"></i><i style="background:#e8b400"></i><i style="background:#e05300"></i><i style="background:#c00"></i></div>
+<code>image edit, thermal infrared surveillance look, keep the same composition and silhouette, FLIR-style false-color ramp from deep navy blue and cyan in cold zones to yellow orange and red in warm zones, smooth believable heat gradients with soft bloom around hot areas, faint sensor grain and scan noise, minimal tactical HUD overlay with corner brackets, small reticle, detection boxes and tiny telemetry labels, machine-made high-contrast night-vision mood, no natural photo colors</code></section>
+
+<section class="bomb" id="t2"><div class="bomb-head"><span>02</span><h3>Paisaje nocturno</h3><small>cordilleras frías→cálidas + sol caliente</small></div>
+<div class="demo t-city"><div class="grid"></div><div class="sun"></div><div class="m m1"></div><div class="m m2"></div><div class="m m3"></div>
+<div class="hud"><i></i><i></i><i></i><i></i><span class="tele">SECTOR 7 · 02:14 AM</span></div></div>
+<span class="variant"><b>Variante de la misma receta:</b> + "aerial night landscape, three mountain ridges fading from cold blue to hot red, single glowing heat-dot sun, faint coordinate grid"</span></section>
+
+<section class="bomb" id="t3"><div class="bomb-head"><span>03</span><h3>Escala de calor</h3><small>leyenda FLIR −20°…+60°</small></div>
+<div class="demo t-scale"><span class="lbl">FLIR · FALSE COLOR</span><div class="bar"></div><div class="ticks"><span>−20°</span><span>0°</span><span>+20°</span><span>+36.6°</span><span>+60°</span></div></div>
+<span class="variant"><b>UI robable:</b> esta leyenda funciona como colorbar de dashboards, mapas de calor y telemetría.</span></section>
+
+<section class="bomb" id="t5"><div class="bomb-head"><span>04</span><h3>Multitud</h3><small>tres firmas, tres temperaturas</small></div>
+<div class="demo t-crowd"><div class="ppl"><div class="p cold"></div><div class="p warm"></div><div class="p hot"></div></div>
+<div class="hud"><i></i><i></i><i></i><i></i><span class="tele">3 FIRMAS · 12° / 28° / 41°</span></div></div>
+<span class="variant"><b>Variante de la misma receta:</b> + "crowd of three figures with distinct heat levels, cold blue outsider, warm amber passerby, red-hot subject"</span></section>
+
+<section class="bomb" id="t6"><div class="bomb-head"><span>05</span><h3>Motor caliente</h3><small>núcleo que respira + rejillas</small></div>
+<div class="demo t-motor"><div class="eng"><div class="core"></div><div class="vents"></div></div><span class="lbl">NÚCLEO 640° · REFRIGERANDO</span></div>
+<span class="variant"><b>UI robable:</b> núcleo pulsante para estados de carga, servidores y baterías.</span></section>
+
+<section class="bomb" id="t7"><div class="bomb-head"><span>06</span><h3>Termómetro</h3><small>tubo + bulbo + lectura</small></div>
+<div class="demo t-termo"><div class="tube"><div class="merc"></div></div><div class="bulb"></div><span class="read">38.4°</span></div>
+<span class="variant"><b>UI robable:</b> gauge vertical para fiebre, clima, CPU y fundraising.</span></section>
+
+<section class="bomb" id="t8"><div class="bomb-head"><span>07</span><h3>Huellas</h3><small>rastro que se enfría</small></div>
+<div class="demo t-trail"><div class="steps"><span></span><span></span><span></span><span></span><span></span></div>
+<div class="hud"><i></i><i></i><i></i><i></i><span class="tele">RASTRO · 40s</span></div></div>
+<span class="variant"><b>Variante de la misma receta:</b> + "cooling footprint trail fading from red to navy, tracking shot"</span></section>
+
+<section class="bomb" id="t9"><div class="bomb-head"><span>08 ★</span><h3>Visor dron — primera persona</h3><small>cruz + telemetría + REC</small></div>
+<div class="demo t-fpv"><div class="top"><span class="rec">REC</span><span>19.42°N 99.13°O · ALT 120m</span><span>BAT 78%</span></div><div class="cross"></div>
+<div class="hud"><i></i><i></i><i></i><i></i></div></div>
+<span class="variant"><b>UI robable:</b> overlay FPV completo para drones, cámaras y streams tácticos.</span></section>
+
+<h2 class="group">CRT — fósforo, vidrio y apagado</h2>
+
+<section class="bomb" id="c1"><div class="bomb-head"><span>09</span><h3>Terminal</h3><small>cursor vivo + led + barba de scanlines</small></div>
+<div class="demo t-crt"><div class="scr">C:\&gt; dir<br /><span class="dim">SEÑAL_OK&nbsp;&nbsp;GRANO.BIN&nbsp;&nbsp;FOSFORO.SYS</span><br />listo. <span class="cur"></span><span class="led"></span></div></div>
+<code>image edit, same person pose expression and framing, look like a photo taken of an old green-phosphor CRT screen, single green channel from deep black to glowing green-white with no other colors, fine horizontal scanlines, faint vertical stripe structure in highlights, soft phosphor bloom bleeding from bright edges, slight vertical smear, heavy corner vignette, subtle curved-glass barrel warp, crushed blacks, soft focus, dark room mood</code></section>
+
+<section class="bomb" id="c3"><div class="bomb-head"><span>10 ★</span><h3>Apagado CRT — el colapso a línea</h3><small>la joya: ⏻ con flash</small></div>
+<div class="switcher"><button id="pwrBtn" aria-pressed="false">⏻ apagar / encender</button></div>
+<div class="demo t-crt c-power" id="pwrDemo"><div class="flash"></div><div class="scr">SEÑAL EN VIVO <span class="cur"></span></div></div>
+<span class="variant"><b>UI robable:</b> el colapso vertical-a-línea sirve para transiciones, modales que "se apagan" y game-over.</span></section>
+
+<section class="bomb" id="c4"><div class="bomb-head"><span>11</span><h3>Estática — canal sin señal</h3><small>grano animado + glow</small></div>
+<div class="demo t-crt c-noise"><div class="scr"><div class="static"></div><span class="chan">CANAL 03</span></div></div>
+<span class="variant"><b>Variante de la misma receta:</b> + "dead channel static, animated grain, faint ghost text, no signal"</span></section>
+
+<section class="bomb" id="c6"><div class="bomb-head"><span>12 ★</span><h3>Reloj — hora viva</h3><small>dígitos con glow real</small></div>
+<div class="demo t-crt c-clock"><div class="scr"><span class="clock" id="crtClock">00:00:00</span><span class="alarm">ALARMA 06:30 · SNOOZE</span></div></div>
+<span class="variant"><b>UI robable:</b> relojes, contadores y tableros con tipografía mono + glow.</span></section>
+
+<section class="bomb" id="c7"><div class="bomb-head"><span>13</span><h3>Ecualizador</h3><small>12 barras al ritmo</small></div>
+<div class="demo t-crt c-eq"><div class="scr"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+<span class="variant"><b>UI robable:</b> visualizadores de audio, niveles de mic y actividad.</span></section>
+
+<section class="bomb" id="c9"><div class="bomb-head"><span>14</span><h3>Radar</h3><small>barrido circular + blips</small></div>
+<div class="demo t-crt c-radar"><div class="scr"><div class="radar"><span class="blip" style="top:30%;left:60%"></span><span class="blip" style="top:62%;left:38%;animation-delay:1s"></span></div></div></div>
+<span class="variant"><b>UI robable:</b> radares, sonares y mapas de proximidad.</span></section>
+</main>
+
+<footer class="lab-footer"><p><a href="../index.html">← volver a la galería</a> · Trending ×14 · prompts propios · MIT</p></footer>
+<script>
+var pd=document.getElementById('portraitDemo');
+document.querySelectorAll('[data-h]').forEach(function(b){b.addEventListener('click',function(){pd.setAttribute('data-heat',b.getAttribute('data-h'));document.querySelectorAll('[data-h]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')})})});
+var pw=document.getElementById('pwrDemo'),pb=document.getElementById('pwrBtn');
+pb.addEventListener('click',function(){var off=pw.classList.toggle('off');pb.setAttribute('aria-pressed',off?'true':'false')});
+function tick(){var d=new Date(),p=function(n){return (n<10?'0':'')+n};var el=document.getElementById('crtClock');if(el){el.textContent=p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds())}}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
